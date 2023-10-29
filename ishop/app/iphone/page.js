@@ -14,7 +14,7 @@ export default function Iphone() {
               width={100}
               height={100}
             />
-            <Link href="/Iphone_14_Pro_Max">{iphone.name}</Link>
+            <Link href={`${iphone.name}`}>{iphone.name}</Link>
           </li>
         ))}
       </ul>

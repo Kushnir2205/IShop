@@ -16,20 +16,17 @@ const TheHeader = () => {
       <Link className={css.aboutUs} href="/ipad">
         Ipad
       </Link>
-      <Link className={css.aboutUs} href="/mac">
-        Mac
+      <Link className={css.aboutUs} href="/macbook">
+        Macbook
       </Link>
       <Link className={css.aboutUs} href="/airpods">
         Airpods
       </Link>
-      <Link className={css.aboutUs} href="/trade in">
-        Trade in
-      </Link>
-      <Link className={css.aboutUs} href="/contacts">
-        Contacts
+      <Link className={css.aboutUs} href="/aboutUs">
+        About us
       </Link>
     </header>
   );
 };
 
-export { TheHeader };
+export default TheHeader;
