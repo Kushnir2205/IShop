@@ -1,3 +1,5 @@
+import "normalize.css/normalize.css";
+import "./global.css";
 import TheHeader from "@/components/TheHeader/TheHeader";
 import { Inter } from "next/font/google";
 

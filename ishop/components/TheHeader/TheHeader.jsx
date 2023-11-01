@@ -6,7 +6,7 @@ import Link from "next/link";
 const TheHeader = () => {
   return (
     <header className={css.wrapper}>
-      <Image src={logo} alt="logo" width={35} />
+      {/* <Image className={css.logoIcon} src={logo} alt="logo" width={35} /> */}
       <Link className={css.logo} href="/">
         iShop
       </Link>
