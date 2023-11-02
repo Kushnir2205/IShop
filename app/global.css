@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   --main-background-color: #0f0f0f;
   --title-text-color: #fffdfd;
@@ -27,6 +32,10 @@ a {
 main {
   padding-left: 100px;
   padding-right: 100px;
+}
+ul,
+ol {
+  list-style: none;
 }
 .container {
   background-color: var(--main-background-color);

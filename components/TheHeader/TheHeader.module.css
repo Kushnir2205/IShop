@@ -11,14 +11,39 @@
 .products {
   text-decoration: none;
 }
-.aboutUs {
+/* .aboutUs {
   text-decoration: none;
+} */
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+  height: 38px;
+}
+.navItem:hover {
+  color: var(--price-color);
 }
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 30px;
   background-color: var(--main-background-color);
   border-bottom: 1px solid var(--border-header-color);
-  padding: 41px 31px 34px 100px;
+  padding: 41px 100px 34px 100px;
 }
+.iconsList {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+.headerIcon {
+  width: 28px;
+  height: 28px;
+}
+.headerIcon:hover {
+  fill: var(--price-color);
+  stroke: var(--price-color);
+}
+/* .activeLink {
+  color: var(--price-color);
+} */
