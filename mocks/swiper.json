@@ -1,0 +1,28 @@
+{
+  "slider": [
+    {
+      "id": 0,
+      "title": "Iphone 15 Pro Max",
+      "description": "Нове покоління максимальних можливостей",
+      "image": "/public/assets/img/slider/1.png"
+    },
+    {
+      "id": 1,
+      "title": "Apple Mac Book",
+      "description": "Нове покоління максимальних можливостей",
+      "image": "/public/assets/img/slider/2.png"
+    },
+    {
+      "id": 2,
+      "title": "Apple Airpods",
+      "description": "Нове покоління можливостей",
+      "image": "/public/assets/img/slider/3.png"
+    },
+    {
+      "id": 3,
+      "title": "Apple Watch Series 5",
+      "description": "Нове покоління можливостей",
+      "image": "/public/assets/img/slider/4.png"
+    }
+  ]
+}

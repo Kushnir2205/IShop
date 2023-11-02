@@ -7,6 +7,7 @@ body {
   --footer-background-color: #242424;
   --toggle-bg-btn: #322f2f;
   --border-header-color: #b1b1b1;
+  --purple-slider-btn-color: #cdbbfb;
 }
 body.light {
   --main-background-color: #fff;
@@ -23,7 +24,23 @@ a {
   text-decoration: none;
   color: inherit;
 }
+main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
 .container {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
+}
+
+.swiper-pagination-bullet {
+  background: none;
+  background-color: #e9e9e9;
+  opacity: 1;
+  height: 21px;
+  width: 21px;
+  --swiper-pagination-bullet-horizontal-gap: 14px;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--purple-slider-btn-color);
 }

@@ -1,0 +1,21 @@
+.leftSide {
+  text-align: left;
+}
+.title {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+.desc {
+  margin-bottom: 48px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.button {
+  display: flex;
+  width: 292px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--main-text-color);
+  border-radius: 16px;
+}

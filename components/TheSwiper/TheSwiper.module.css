@@ -1,0 +1,25 @@
+.swiperContainer {
+  padding-bottom: 172px;
+}
+
+.swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  height: 300px;
+  color: var(--main-text-color);
+
+  padding-top: 48px;
+  padding-bottom: 24px;
+  min-height: 648px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
