@@ -1,3 +1,9 @@
+import TheSwiper from "@/components/TheSwiper/TheSwiper";
+
 export default function Home() {
-  return <h1>Головна сторінка</h1>;
+  return (
+    <>
+      <TheSwiper />
+    </>
+  );
 }
