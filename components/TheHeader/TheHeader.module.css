@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
-
-  border-bottom: 1px solid #fff;
+  background-color: var(--main-background-color);
+  border-bottom: 1px solid var(--border-header-color);
   padding: 41px 31px 34px 100px;
 }

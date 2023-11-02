@@ -1,8 +1,29 @@
 body {
-  background-color: #0f0f0f;
-  color: #fff;
+  --main-background-color: #0f0f0f;
+  --title-text-color: #fffdfd;
+  --main-text-color: #fff;
+  --price-color: #fb861a;
+  --in-stock-color: #4fd12e;
+  --footer-background-color: #242424;
+  --toggle-bg-btn: #322f2f;
+  --border-header-color: #b1b1b1;
 }
+body.light {
+  --main-background-color: #fff;
+  --title-text-color: #000;
+  --main-text-color: #000;
+  --price-color: #fb861a;
+  --in-stock-color: #4fd12e;
+  --footer-background-color: #ededed;
+  --toggle-bg-btn: #f0f0f0;
+  --border-header-color: #535353;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+.container {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
 }
