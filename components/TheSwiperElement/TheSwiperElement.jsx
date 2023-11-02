@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import css from "./TheSwiperElement.module.css";
 
@@ -11,7 +12,14 @@ const TheSwiperElement = ({ data }) => {
           Детально
         </Link>
       </div>
-      <div className={css.rightSide}></div>
+      <div className={css.rightSide}>
+        <Image
+          src={require(`/public/assets/img/slider/${data.id + 1}.png`)}
+          width={412}
+          height={543}
+          alt={data.title}
+        />
+      </div>
     </>
   );
 };
