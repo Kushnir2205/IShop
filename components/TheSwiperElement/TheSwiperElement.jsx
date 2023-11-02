@@ -5,9 +5,11 @@ const TheSwiperElement = ({ data }) => {
   return (
     <>
       <div className={css.leftSide}>
-        <h2>{data.title}</h2>
-        <p>{data.description}</p>
-        <Link href={"/"}>Детально</Link>
+        <h2 className={css.title}>{data.title}</h2>
+        <p className={css.desc}>{data.description}</p>
+        <Link className={css.button} href={"/"}>
+          Детально
+        </Link>
       </div>
       <div className={css.rightSide}></div>
     </>
