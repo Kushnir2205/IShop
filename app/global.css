@@ -7,6 +7,7 @@ body {
   --footer-background-color: #242424;
   --toggle-bg-btn: #322f2f;
   --border-header-color: #b1b1b1;
+  --purple-slider-btn-color: #cdbbfb;
 }
 body.light {
   --main-background-color: #fff;
@@ -22,6 +23,10 @@ body.light {
 a {
   text-decoration: none;
   color: inherit;
+}
+main {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .container {
   background-color: var(--main-background-color);

@@ -1,18 +1,19 @@
-.swiper {
-  width: 100%;
-  height: 100%;
+.swiperContainer {
+  padding-bottom: 172px;
 }
 
 .swiperSlide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   height: 300px;
-  color: black;
+  color: var(--main-text-color);
 
-  /* Center slide text vertically */
+  padding-top: 48px;
+  padding-bottom: 24px;
+  min-height: 648px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
