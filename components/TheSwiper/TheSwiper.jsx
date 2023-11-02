@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./slider.css";
+import "../../app/global.css";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import css from "./TheSwiper.module.css";
@@ -14,7 +14,7 @@ const TheSwiper = () => {
     <section className={css.swiperContainer}>
       <Swiper
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
