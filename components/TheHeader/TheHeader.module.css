@@ -20,6 +20,11 @@
   gap: 37px;
   height: 38px;
 }
+
+.navItem {
+  transition: color 0.3s;
+}
+
 .navItem:hover {
   color: var(--price-color);
 }
@@ -39,11 +44,10 @@
 .headerIcon {
   width: 28px;
   height: 28px;
+  transition: fill 0.3s;
+  cursor: pointer;
 }
 .headerIcon:hover {
   fill: var(--price-color);
   stroke: var(--price-color);
 }
-/* .activeLink {
-  color: var(--price-color);
-} */

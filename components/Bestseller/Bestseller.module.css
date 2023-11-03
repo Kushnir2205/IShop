@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 400px;
+  padding: 40.5px 0 40.5px 0;
+  border-bottom: 1px solid var(--border-header-color);
+  margin-bottom: 80px;
+}
+.productList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.bestsellerTitle {
+  color: var(--main-text-color);
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}

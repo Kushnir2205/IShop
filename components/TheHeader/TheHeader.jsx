@@ -1,9 +1,6 @@
 import css from "./TheHeader.module.css";
 import Link from "next/link";
 import ButtonTheme from "../ButtonTheme/ButtonTheme";
-import search from "../../public/assets/icons/search.svg";
-import basket from "../../public/assets/icons/basket.svg";
-import Image from "next/image";
 import { BsSearch } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 const TheHeader = () => {
@@ -38,7 +35,7 @@ const TheHeader = () => {
           </li>
           <li className={css.navItem}>
             <Link className={css.aboutUs} href="/aboutUs">
-              About us
+              Про нас
             </Link>
           </li>
         </ul>
@@ -49,12 +46,9 @@ const TheHeader = () => {
         </li>
         <li className={css.hoverIcon}>
           <BsSearch className={css.headerIcon} />
-          {/* <Image className={css.headerIcon} src={search} alt="search icon" /> */}
         </li>
-
         <li className={css.hoverIcon}>
           <HiShoppingCart className={css.headerIcon} />
-          {/* <Image className={css.headerIcon} src={basket} alt="basket" /> */}
         </li>
       </ul>
     </header>
