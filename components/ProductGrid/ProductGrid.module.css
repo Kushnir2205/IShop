@@ -1,0 +1,138 @@
+.gridWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 48px;
+  padding-top: 172px;
+}
+.leftList {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.rightList {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.listItem {
+  width: 560px;
+  background-color: var(--footer-background-color);
+  border-radius: 24px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+  display: flex;
+  transition: transform 0.4s;
+}
+.listItem:hover {
+  transform: scale(1.1);
+}
+.leftBar {
+  width: 195px;
+  padding: 48px 0 0 48px;
+}
+
+.leftBotItem {
+  height: 608px;
+}
+.rightBotItem {
+  height: 331px;
+}
+.rightTopItem {
+  height: 608px;
+}
+.macImg {
+  padding: 35px 0 35px 0;
+  width: 350px;
+  height: 262px;
+}
+.iphoneImg {
+  padding: 48px 0 54px 0;
+  margin-left: 10px;
+  width: 330px;
+  height: 480px;
+}
+.ipadImg {
+  padding: 48px 0 48px 0;
+  margin-left: 35px;
+  width: 449px;
+  height: 495px;
+}
+.airPodsImg {
+  padding: 8px 0 8px 0;
+  margin-left: 70px;
+  width: 260px;
+  height: 315px;
+}
+
+.bigTitle {
+  color: var(--main-text-color);
+  background: var(
+    --linear,
+    linear-gradient(180deg, #8388ff 23.94%, rgba(0, 9, 216, 0) 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 24px;
+}
+.quantityProducts {
+  color: var(--main-text-color);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-bottom: 73px;
+}
+.tradeInContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  transition: transform 0.4s;
+}
+.tradeInContainer:hover {
+  transform: scale(1.1);
+}
+.tradeInWrapper {
+  width: 1160px;
+  height: 331px;
+  background-color: var(--footer-background-color);
+  border-radius: 24px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+
+  display: flex;
+  justify-content: space-between;
+}
+.tradeInImg {
+  width: 306px;
+  height: 302px;
+}
+.tradeInTitle {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.middle {
+  padding-top: 96px;
+  padding-bottom: 97px;
+}
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+.refToPage {
+  color: var(--main-text-color);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.refIcon {
+  display: flex;
+  align-items: center;
+}
