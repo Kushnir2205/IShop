@@ -33,10 +33,7 @@ main {
   padding-left: 100px;
   padding-right: 100px;
 }
-ul,
-ol {
-  list-style: none;
-}
+
 .container {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
