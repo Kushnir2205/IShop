@@ -1,0 +1,55 @@
+.aboutUsWrapper {
+  display: flex;
+  gap: 30px;
+}
+.AboutUsTitle {
+  color: var(--main-text-color);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-bottom: 70px;
+}
+.AboutUsSubTitle {
+  color: var(--main-text-color);
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.AboutUsDesc {
+  max-height: 400px;
+  overflow: auto;
+  transition: max-height 0.5s ease-in;
+}
+.videoList {
+  display: flex;
+  gap: 20px;
+}
+.videoItem {
+  width: 350px;
+  height: 550px;
+  /* background-color: var(--footer-background-color); */
+
+  /* border-radius: 50px; */
+  text-align: center;
+  margin-bottom: 100px;
+  transition: transform 0.3s;
+}
+.videoItem:hover {
+  transform: scale(1.1);
+}
+.video {
+  /* position: relative;
+  overflow: hidden; */
+  border-radius: 20%;
+}
+/* ::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--footer-background-color);
+} */
