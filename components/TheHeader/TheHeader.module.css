@@ -42,6 +42,7 @@
   margin-left: auto;
 }
 .headerIcon {
+  fill: var(--icon-color);
   width: 28px;
   height: 28px;
   transition: fill 0.3s;

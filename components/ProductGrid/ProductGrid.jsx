@@ -78,7 +78,7 @@ const ProductGrid = () => {
           <div className={s.middle}>
             <h2 className={`${s.bigTitle} ${s.tradeInTitle}`}>TRADE-IN</h2>
             <div className={s.refIcon}>
-              <Link className={s.refToPage} href="/trade-in">
+              <Link className={s.refToPage} href="/tradeIn">
                 Дізнатися більше
               </Link>
               <HiOutlineArrowRight className={s.arrowIcon} />
