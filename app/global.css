@@ -13,6 +13,7 @@ body {
   --toggle-bg-btn: #322f2f;
   --border-header-color: #b1b1b1;
   --purple-slider-btn-color: #cdbbfb;
+  --icon-color: #f8f8f8;
 }
 body.light {
   --main-background-color: #fff;
@@ -23,6 +24,7 @@ body.light {
   --footer-background-color: #ededed;
   --toggle-bg-btn: #f0f0f0;
   --border-header-color: #535353;
+  --icon-color: #181616;
 }
 
 a {

@@ -1,0 +1,57 @@
+.footerContainer {
+  background-color: var(--footer-background-color);
+  padding: 0 100px 100px 100px;
+}
+.footerList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footerLogoItem {
+  padding-top: 72px;
+}
+.footerLogo {
+  color: var(--main-text-color);
+
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: color 0.3s;
+}
+.footerLogo:hover {
+  color: var(--price-color);
+}
+.footerTitle {
+  margin-bottom: 20px;
+}
+.footerRefs {
+  transition: color 0.3s;
+}
+.footerRefs:hover {
+  color: var(--price-color);
+  fill: var(--price-color);
+}
+.footerSubList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footerItems {
+  padding-top: 84px;
+}
+.followUs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footerIcons {
+  fill: var(--icon-color);
+  width: 20px;
+  height: 20px;
+  transition: fill 0.3s;
+}
+.footerIcons:hover {
+  fill: var(--price-color);
+  color: var(--price-color);
+}
