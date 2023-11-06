@@ -2,24 +2,46 @@
   text-align: left;
 }
 .title {
-  font-size: 56px;
+  font-size: 28px;
   margin-bottom: 16px;
+  @media (min-width: 768px) {
+    font-size: 56px;
+  }
 }
 .desc {
+  font-size: 18px;
   margin-bottom: 48px;
-  font-size: 22px;
   font-weight: 300;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 }
 .button {
   display: flex;
-  width: 292px;
+  width: 99%;
   height: 56px;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--main-text-color);
   border-radius: 16px;
+  @media (min-width: 768px) {
+    width: 292px;
+  }
 }
 
 .image {
-  margin-right: 5px;
+  width: 220px;
+  height: 290px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 355px;
+    height: 467px;
+  }
+  @media (min-width: 1440px) {
+    margin-right: 5px;
+    width: 412px;
+    height: 543px;
+  }
 }

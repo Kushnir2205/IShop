@@ -15,9 +15,7 @@ const TheSwiperElement = ({ data }) => {
       <div className={css.rightSide}>
         <Image
           src={require(`/public/assets/img/slider/${data.id + 1}.png`)}
-          width={412}
-          height={543}
-          className={ css.image}
+          className={css.image}
           alt={data.title}
         />
       </div>
