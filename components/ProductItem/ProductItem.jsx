@@ -15,9 +15,6 @@ const ProductItem = ({ product }) => {
             height={200}
             alt={product.name}
           />
-          <div className={s.overlay}>
-            <button className={s.buyProduct}>Замовити</button>
-          </div>
 
           <p className={s.productName}>{product.name}</p>
           <p className={s.productColor}>{product.color}</p>
@@ -25,6 +22,9 @@ const ProductItem = ({ product }) => {
             <p className={s.productPrice}>{product.price}</p>
             <HiShoppingCart className={s.iconCart} />
           </div>
+        </div>
+        <div className={s.overlay}>
+          <button className={s.buyProduct}>Замовити</button>
         </div>
       </Link>
     </li>

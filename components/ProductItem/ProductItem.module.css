@@ -1,13 +1,15 @@
 .productItem {
+  position: relative;
   width: 292px;
   background-color: var(--footer-background-color);
   border-radius: 24px;
   padding: 20px;
-  transition: transform 0.4s;
+  transition: transform 0.6s;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
 }
 .productItem:hover {
   transform: scale(1.1);
+  height: 520px;
 }
 .phoneImg {
   display: block;
@@ -57,8 +59,9 @@
 
 .buyProduct {
   display: block;
-  margin-left: 90px;
-
+  /* margin-left: 90px;
+   */
+  width: calc(100% - 40px);
   color: #717fff;
   padding: 18px 30px;
 
@@ -72,16 +75,16 @@
 }
 .overlay {
   position: absolute;
-  left: 0;
-  bottom: 0;
+
+  bottom: 20px;
   width: 100%;
-  height: -5;
-  transform: translateY(100%);
-  transition: transform 0.4s;
+  opacity: 0;
+  transition: transform 0.3s ease-in;
+  transform: scale(0.8);
 }
 
 .productItem:hover .overlay,
 .productItem:focus .overlay {
-  transform: translateY(0);
-  height: 14%;
+  opacity: 1;
+  transform: scale(1);
 }
