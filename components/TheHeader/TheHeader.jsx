@@ -1,54 +1,55 @@
-import css from "./TheHeader.module.css";
+import s from "./TheHeader.module.css";
 import Link from "next/link";
 import ButtonTheme from "../ButtonTheme/ButtonTheme";
 import { BsSearch } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
+import { RiMenu2Line } from "react-icons/ri";
+
 const TheHeader = () => {
   return (
-    <header className={css.wrapper}>
-      <nav className={css.navigation}>
-        <ul className={css.navList}>
-          <li className={css.navItem}>
-            <Link className={css.logo} href="/">
-              iShop
-            </Link>
-          </li>
-          <li className={css.navItem}>
-            <Link className={css.aboutUs} href="/iphone">
+    <header className={s.wrapper}>
+      <nav className={s.navigation}>
+        <RiMenu2Line className={s.burgerBtn} />
+        <Link className={s.logo} href="/">
+          iShop
+        </Link>
+        <ul className={s.navList}>
+          <li className={s.navItem}>
+            <Link className={s.linkItem} href="/iphone">
               Iphone
             </Link>
           </li>
-          <li className={css.navItem}>
-            <Link className={css.aboutUs} href="/ipad">
+          <li className={s.navItem}>
+            <Link className={s.linkItem} href="/ipad">
               Ipad
             </Link>
           </li>
-          <li className={css.navItem}>
-            <Link className={css.aboutUs} href="/macbook">
+          <li className={s.navItem}>
+            <Link className={s.linkItem} href="/macbook">
               Macbook
             </Link>
           </li>
-          <li className={css.navItem}>
-            <Link className={css.aboutUs} href="/airpods">
+          <li className={s.navItem}>
+            <Link className={s.linkItem} href="/airpods">
               Airpods
             </Link>
           </li>
-          <li className={css.navItem}>
-            <Link className={css.aboutUs} href="/aboutUs">
+          <li className={s.navItem}>
+            <Link className={s.linkItem} href="/aboutUs">
               Про нас
             </Link>
           </li>
         </ul>
       </nav>
-      <ul className={css.iconsList}>
-        <li>
+      <ul className={s.iconsList}>
+        <li className={s.btnTheme}>
           <ButtonTheme />
         </li>
-        <li className={css.hoverIcon}>
-          <BsSearch className={css.headerIcon} />
+        <li className={s.hoverIcon}>
+          <BsSearch className={s.headerIcon} />
         </li>
-        <li className={css.hoverIcon}>
-          <HiShoppingCart className={css.headerIcon} />
+        <li className={s.hoverIcon}>
+          <HiShoppingCart className={s.headerIcon} />
         </li>
       </ul>
     </header>

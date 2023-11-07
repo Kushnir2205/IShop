@@ -34,6 +34,7 @@ const Bestseller = () => {
   ];
   return (
     <>
+      <section className={s.container}>
       <div className={s.wrapper}>
         <p className={s.bestsellerTitle}>Хіт продажу</p>
         <p className={s.bestsellerTitle}>Новинки</p>
@@ -43,6 +44,7 @@ const Bestseller = () => {
           <ProductItem key={product.id} product={product} />
         ))}
       </ul>
+      </section>
     </>
   );
 };
