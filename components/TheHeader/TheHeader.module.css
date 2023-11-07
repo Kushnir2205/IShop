@@ -1,8 +1,56 @@
+.wrapper {
+  min-width: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-background-color);
+  border-bottom: 1px solid var(--border-header-color);
+  padding: 48px 24px 24px 24px;
+}
+
+@media only screen and (min-width: 744px) {
+  .wrapper {
+    min-width: 744px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    padding: 41px 100px 34px 100px;
+  }
+}
+.navigation {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+@media only screen and (min-width: 744px) {
+  .navigation {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.btnTheme {
+  display: none;
+}
+@media only screen and (min-width: 1440px) {
+  .btnTheme {
+    display: block;
+  }
+}
 .logo {
-  font-size: 30px;
+  color: var(--main-text-color);
   text-decoration: none;
-  font-weight: bold;
-  margin-right: 272px;
+  transition: color 0.3s;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media only screen and (min-width: 744px) {
+  .logo {
+    text-align: center;
+  }
 }
 .logoIcon {
   fill: white;
@@ -11,35 +59,35 @@
 .products {
   text-decoration: none;
 }
-/* .aboutUs {
-  text-decoration: none;
-} */
+
 .navList {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 37px;
-  height: 38px;
 }
-
-.navItem {
+@media only screen and (min-width: 1440px) {
+  .navList {
+    display: flex;
+  }
+}
+.linkItem {
+  color: var(--main-text-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   transition: color 0.3s;
 }
 
-.navItem:hover {
+.logo:hover,
+.linkItem:hover {
   color: var(--price-color);
 }
-.wrapper {
-  display: flex;
-  align-items: center;
-  background-color: var(--main-background-color);
-  border-bottom: 1px solid var(--border-header-color);
-  padding: 41px 100px 34px 100px;
-}
+
 .iconsList {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-left: auto;
 }
 .headerIcon {
   fill: var(--icon-color);
@@ -51,4 +99,14 @@
 .headerIcon:hover {
   fill: var(--price-color);
   stroke: var(--price-color);
+}
+
+.burgerBtn {
+  width: 48px;
+  height: 48px;
+}
+@media only screen and (min-width: 1440px) {
+  .burgerBtn {
+    display: none;
+  }
 }

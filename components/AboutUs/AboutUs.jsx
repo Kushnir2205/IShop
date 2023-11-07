@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./AboutUS.module.css";
+import s from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
     <>
-      <h2 className={s.AboutUsTitle}>ПРО НАС</h2>
+      <h2 className={s.aboutUsTitle}>ПРО НАС</h2>
       <div className={s.aboutUsWrapper}>
         <ul className={s.videoList}>
           <li className={s.videoItem}>
@@ -19,6 +19,7 @@ const AboutUs = () => {
               <source src="/assets/video/IMG_1556.MP4" type="video/mp4" />
             </video>
           </li>
+
           <li className={s.videoItem}>
             <video
               className={s.video}

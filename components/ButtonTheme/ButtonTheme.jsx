@@ -5,16 +5,20 @@ import s from "./ButtonTheme.module.css";
 export default function ButtonTheme() {
   const [checked, setChecked] = useState(true);
 
+  const handleCheckboxChange = () => {
+    setChecked(!checked);
+  };
+
   return (
     <div className={s.togBtnContainer}>
       <input
-        onClick={() => setChecked((el) => !el)}
+        onChange={handleCheckboxChange}
         className={s.input}
         type="checkbox"
         id="check"
         checked={checked}
       />
-      <label for="check" className={s.togBtn}></label>
+      <label htmlFor="check" className={s.togBtn}></label>
     </div>
   );
 }
