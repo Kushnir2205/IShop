@@ -2,7 +2,7 @@
   display: flex;
   gap: 30px;
 }
-.AboutUsTitle {
+.aboutUsTitle {
   color: var(--main-text-color);
   font-size: 56px;
   font-style: normal;
@@ -11,7 +11,7 @@
 
   margin-bottom: 70px;
 }
-.AboutUsSubTitle {
+.aboutUsTitle {
   color: var(--main-text-color);
 
   font-size: 32px;

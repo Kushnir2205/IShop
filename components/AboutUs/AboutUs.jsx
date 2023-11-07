@@ -4,7 +4,7 @@ import s from "./AboutUs.module.css";
 const AboutUs = () => {
   return (
     <>
-      <h2 className={s.AboutUsTitle}>ПРО НАС</h2>
+      <h2 className={s.aboutUsTitle}>ПРО НАС</h2>
       <div className={s.aboutUsWrapper}>
         <ul className={s.videoList}>
           <li className={s.videoItem}>
