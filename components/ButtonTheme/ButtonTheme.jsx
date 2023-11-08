@@ -1,12 +1,14 @@
 "use client";
-import { useState } from "react";
+import React, { useContext } from "react";
 import s from "./ButtonTheme.module.css";
+import { ThemeContext } from "@/providers/ThemeProvider";
 
 export default function ButtonTheme() {
-  const [checked, setChecked] = useState(true);
+  const [theme, setTheme, btnState, setBtnState] = useContext(ThemeContext);
 
   const handleCheckboxChange = () => {
-    setChecked(!checked);
+    setBtnState(!btnState);
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -16,7 +18,7 @@ export default function ButtonTheme() {
         className={s.input}
         type="checkbox"
         id="check"
-        checked={checked}
+        checked={btnState}
       />
       <label htmlFor="check" className={s.togBtn}></label>
     </div>
