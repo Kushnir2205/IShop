@@ -10,16 +10,12 @@ import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 
-const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+const BurgerMenu = ({ children }) => {
   return (
-    <>
-      <div className={s.backDrop}>
-        {/* <div className={s.burgerHeader}>
+    <div className={s.modalBackDrop}>{children}</div>
+    //<>
+    /* <div className={s.backDrop}>
+        <div className={s.burgerHeader}>
           <div onClick={toggleMenu} className={s.menuBtn}>
             {isOpen ? (
               <TfiClose className={s.closeIcon} />
@@ -33,16 +29,16 @@ const BurgerMenu = () => {
             )}
           </div>
           {isOpen && <Search />}
-        </div> */}
-        {/* {isOpen && (
+        </div> }
+        { {isOpen && (
           <>
             <ListNav isOpen={isOpen} />
             <ButtonTheme />
             <p>Dark theme</p>
           </>
-        )} */}
-      </div>
-    </>
+        )}
+      </div> */
+    //</>
   );
 };
 

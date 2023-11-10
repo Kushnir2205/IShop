@@ -1,3 +1,25 @@
+/* ----------------------  MODALS MAIN STYLES  ----------------- */
+
+.modalBackDrop {
+  width: 258px;
+  min-height: 100vh;
+  border: 1px solid var(--main-text-color);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  padding: 52px 24px;
+  background-color: var(--main-background-color);
+
+  @media only screen and (min-width: 768px) {
+    width: 360px;
+    padding: 40px 36px;
+  }
+}
+/* ----------------------  END OF MODALS MAIN STYLES  ----------------- */
+
 .closeIcon {
   fill: var(--icon-color);
   width: 45px;
@@ -67,13 +89,4 @@
   .logo {
     margin-right: 256px;
   }
-}
-
-.backDrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
 }
