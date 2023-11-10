@@ -3,13 +3,13 @@ import Link from "next/link";
 import ButtonTheme from "../ButtonTheme/ButtonTheme";
 import { BsSearch } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
-import { RiMenu2Line } from "react-icons/ri";
+import BurgerMenuBtn from "../UI/BurgerMenuBtn/BurgerMenuBtn";
 
 const TheHeader = () => {
   return (
     <header className={s.wrapper}>
       <nav className={s.navigation}>
-        {/* <RiMenu2Line className={s.burgerBtn} /> */}
+        <BurgerMenuBtn />
         <Link className={s.logo} href="/">
           iShop
         </Link>
