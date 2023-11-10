@@ -51,6 +51,11 @@ main {
   color: var(--main-text-color);
 }
 
+svg {
+  width: 48px;
+  height: 48px;
+}
+
 /* ------------ SLIDER -------------- */
 @media (max-width: 1440px) {
   .swiper-horizontal > .swiper-pagination-bullets {

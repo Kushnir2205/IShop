@@ -35,7 +35,7 @@ const AboutUs = () => {
         </ul>
 
         <div>
-          <h3 className={s.AboutUsSubTitle}>Ishop у Догобичі</h3>
+          <h3 className={s.aboutUsTitle}>Ishop у Догобичі</h3>
           <p className={s.AboutUsDesc}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea vitae
             vero possimus, placeat obcaecati voluptas quas dolore labore quam,

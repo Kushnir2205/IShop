@@ -6,7 +6,7 @@ import "../../app/global.css";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import css from "./TheSwiper.module.css";
-import { slider } from "@/mocks/swiper.json";
+import slider from "@/mocks/swiper.json";
 import TheSwiperElement from "../TheSwiperElement/TheSwiperElement";
 
 const TheSwiper = () => {

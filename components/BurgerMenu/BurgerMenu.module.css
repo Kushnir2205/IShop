@@ -1,0 +1,24 @@
+/* ----------------------  MODALS MAIN STYLES  ----------------- */
+
+.modalBackDrop {
+  width: 258px;
+  min-height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  padding: 48px 24px;
+  background-color: var(--main-background-color);
+
+  @media only screen and (min-width: 768px) {
+    width: 360px;
+    padding: 40px 36px;
+  }
+}
+/* ----------------------  END OF MODALS MAIN STYLES  ----------------- */
+
+.section {
+  padding-bottom: 28px;
+}

@@ -3,6 +3,7 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { SiTelegram } from "react-icons/si";
 import s from "./TheFooter.module.css";
+import ListNav from "../ListNav/ListNav";
 
 const TheFooter = () => {
   return (
@@ -15,33 +16,7 @@ const TheFooter = () => {
         </li>
         <li className={s.footerItems}>
           <h2 className={s.footerTitle}>Категорії:</h2>
-          <ul className={s.footerSubList}>
-            <li>
-              <Link className={s.footerRefs} href="/iphone">
-                IPhone
-              </Link>
-            </li>
-            <li>
-              <Link className={s.footerRefs} href="/ipad">
-                IPad
-              </Link>
-            </li>
-            <li>
-              <Link className={s.footerRefs} href="/macbook">
-                MacBook
-              </Link>
-            </li>
-            <li>
-              <Link className={s.footerRefs} href="/airpods">
-                Airpods
-              </Link>
-            </li>
-            <li>
-              <Link className={s.footerRefs} href="/aboutUs">
-                Про нас
-              </Link>
-            </li>
-          </ul>
+          <ListNav isHeader={false} />
         </li>
         <li className={s.footerItems}>
           <h2 className={s.footerTitle}>Контакти:</h2>

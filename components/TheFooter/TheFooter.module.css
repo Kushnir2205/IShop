@@ -2,6 +2,7 @@
   background-color: var(--footer-background-color);
   padding: 0 100px 100px 100px;
 }
+
 .footerList {
   display: flex;
   align-items: flex-start;
