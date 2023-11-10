@@ -35,15 +35,15 @@ const Bestseller = () => {
   return (
     <>
       <section className={s.container}>
-      <div className={s.wrapper}>
-        <p className={s.bestsellerTitle}>Хіт продажу</p>
-        <p className={s.bestsellerTitle}>Новинки</p>
-      </div>
-      <ul className={s.productList}>
-        {products.map((product) => (
-          <ProductItem key={product.id} product={product} />
-        ))}
-      </ul>
+        <div className={s.wrapper}>
+          <p className={s.bestsellerTitle}>Хіт продажу</p>
+          <p className={s.bestsellerTitle}>Новинки</p>
+        </div>
+        <ul className={s.productList}>
+          {products.map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </ul>
       </section>
     </>
   );

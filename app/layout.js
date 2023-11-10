@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <body className={inter.className + " container"}>
           <TheHeader />
           <main>{children}</main>
-          <TheFooter />
+          {/* <TheFooter /> */}
         </body>
       </ThemeProvider>
     </html>
