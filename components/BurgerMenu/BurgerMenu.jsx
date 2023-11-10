@@ -19,7 +19,7 @@ const BurgerMenu = () => {
   return (
     <>
       <div className={s.backDrop}>
-        <div className={s.burgerHeader}>
+        {/* <div className={s.burgerHeader}>
           <div onClick={toggleMenu} className={s.menuBtn}>
             {isOpen ? (
               <TfiClose className={s.closeIcon} />
@@ -33,25 +33,14 @@ const BurgerMenu = () => {
             )}
           </div>
           {isOpen && <Search />}
-        </div>
-        {isOpen && (
+        </div> */}
+        {/* {isOpen && (
           <>
             <ListNav isOpen={isOpen} />
             <ButtonTheme />
             <p>Dark theme</p>
           </>
-        )}
-        <ul className={s.iconsList}>
-          <li className={s.btnTheme}>
-            <ButtonTheme />
-          </li>
-          <li className={s.hoverIcon}>
-            <BsSearch className={s.headerIcon} />
-          </li>
-          <li className={s.hoverIcon}>
-            <HiShoppingCart className={s.headerIcon} />
-          </li>
-        </ul>
+        )} */}
       </div>
     </>
   );

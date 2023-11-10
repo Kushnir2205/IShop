@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <body className={inter.className + " container"}>
-          {/* <TheHeader /> */}
+          <TheHeader />
           <main>{children}</main>
           <TheFooter />
         </body>
