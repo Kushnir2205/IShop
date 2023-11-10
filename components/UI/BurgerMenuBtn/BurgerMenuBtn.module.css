@@ -12,8 +12,10 @@
   height: 22px;
   position: absolute;
   right: 19px;
+  top: 64px;
   fill: var(--icon-color);
   @media only screen and (min-width: 768px) {
     right: 29px;
+    top: 56px;
   }
 }

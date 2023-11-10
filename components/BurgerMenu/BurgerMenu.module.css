@@ -3,14 +3,13 @@
 .modalBackDrop {
   width: 258px;
   min-height: 100vh;
-  border: 1px solid var(--main-text-color);
   position: fixed;
   overflow: hidden;
   top: 0;
   left: 0;
   z-index: 1000;
 
-  padding: 52px 24px;
+  padding: 48px 24px;
   background-color: var(--main-background-color);
 
   @media only screen and (min-width: 768px) {
@@ -20,73 +19,6 @@
 }
 /* ----------------------  END OF MODALS MAIN STYLES  ----------------- */
 
-.closeIcon {
-  fill: var(--icon-color);
-  width: 45px;
-  height: 37px;
-}
-.burgerHeader {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  /* padding: 48px 0 24px; */
-  position: relative;
-}
-/* .burgerHeader::after {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  top: calc(100% + 24px);
-  left: -24px;
-  right: 0;
-  bottom: -24px;
-  height: 1px;
-  background: var(--border-header-color);
-} */
-.burgerBtn {
-  width: 45px;
-  height: 37px;
-}
-/* @media only screen and (min-width: 1440px) {
-  .burgerBtn {
-    display: none;
-  }
-} */
-.mobileBtn {
-  display: none;
-}
-@media only screen and (max-width: 1439px) {
-  .mobileBtn {
-    display: block;
-    position: absolute;
-    right: 32px;
-    top: 27px;
-    cursor: pointer;
-    z-index: 10;
-  }
-}
-.burgerLogo {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.logo {
-  color: var(--main-text-color);
-  text-decoration: none;
-  transition: color 0.3s;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-@media only screen and (min-width: 744px) {
-  .logo {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .logo {
-    margin-right: 256px;
-  }
+.section {
+  padding-bottom: 28px;
 }

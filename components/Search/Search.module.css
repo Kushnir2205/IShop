@@ -6,17 +6,22 @@
 
 .input {
   display: flex;
-  width: 258px;
+  width: 163px;
   height: 40px;
   padding: 16px;
   padding-left: 40px;
   align-items: center;
   gap: 8px;
 
+  border: none;
   border-radius: 40px;
   background: var(--toggle-bg-btn);
   outline: none;
   color: var(--main-text-color);
+  @media only screen and (min-width: 768px) {
+    width: 248px;
+    height: 48px;
+  }
 }
 
 .input:focus {
@@ -27,4 +32,6 @@
   position: absolute;
   top: 6;
   left: 16px;
+  width: 15px;
+  height: 15px;
 }
