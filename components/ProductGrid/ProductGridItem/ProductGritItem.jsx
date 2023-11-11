@@ -6,7 +6,7 @@ import goldIphone from "../../../public/assets/img/tradeIn/gold_iphone.png";
 import box from "../../../public/assets/img/tradeIn/iphone_in_box.png";
 import mac from "../../../public/assets/img/slider/2.png";
 import iphone from "../../../public/assets/img/slider/1.png";
-
+import ipad from "../../../public/assets/img/tradeIn/ipad.png";
 import airpods from "../../../public/assets/img/slider/3.png";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { useDeviceMedia } from "@/hooks/useDeviceMEdia";
@@ -52,7 +52,7 @@ const ProductGritItem = () => {
                 <HiOutlineArrowRight className={s.arrowIcon} />
               </div>
             </div>
-            {/* <Image className={s.ipadImg} src={ipad} alt="ipad" /> */}
+            <Image className={s.ipadImg} src={ipad} alt="ipad" />
           </Link>
         </li>
 
