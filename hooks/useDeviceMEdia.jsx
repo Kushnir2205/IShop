@@ -1,5 +1,6 @@
+"use client";
+import { screen } from "@/utils/screens";
 import { useMedia } from "react-use";
-import { screen } from "./screens";
 
 export function useDeviceMedia() {
   const isMobile = useMedia(screen.breakpoints.mobile.media);

@@ -42,6 +42,17 @@
 }
 .productPrice {
   color: var(--price-color);
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
+    #ffcc00 25%,
+    #ffb300 50%,
+    #ff9900 75%,
+    #ffd700 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
@@ -59,14 +70,27 @@
 
 .buyProduct {
   display: block;
-  /* margin-left: 90px;
-   */
+  font-size: 18px;
+  font-weight: 400;
+
   width: calc(100% - 40px);
   color: #717fff;
+  color: var(--main-text-color);
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
+    #ffcc00 25%,
+    #ffb300 50%,
+    #ff9900 75%,
+    #ffd700 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 18px 30px;
 
   border-radius: 16px;
-  border: 2px solid #717fff;
+  border: 2px solid #ffcc00;
 }
 
 .cardOverlay {
@@ -76,7 +100,7 @@
 .overlay {
   position: absolute;
 
-  bottom: 10px;
+  bottom: 5px;
   width: 100%;
   opacity: 0;
   transition: transform 0.3s ease-in;

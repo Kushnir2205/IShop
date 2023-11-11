@@ -4,6 +4,17 @@
 }
 .aboutUsTitle {
   color: var(--main-text-color);
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
+    #ffcc00 25%,
+    #ffb300 50%,
+    #ff9900 75%,
+    #ffd700 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
