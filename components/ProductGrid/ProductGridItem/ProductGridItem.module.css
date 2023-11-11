@@ -1,0 +1,279 @@
+.barList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  column-gap: 48px;
+}
+
+.item {
+  width: 163px;
+  height: 223px;
+  padding: 24px 4px 42px 4px;
+  background-color: var(--footer-background-color);
+  border-radius: 24px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+  transition: transform 0.4s;
+}
+
+@media only screen and (min-width: 744px) {
+  .item {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 744px) {
+  .smallItem {
+    width: 312px;
+    height: 400px;
+    padding-top: 48px;
+    background-color: var(--footer-background-color);
+    border-radius: 24px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+    transition: transform 0.4s;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .smallItem {
+    width: 608px;
+    height: 331px;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+}
+@media only screen and (min-width: 744px) {
+  .longItem {
+    height: 551px;
+    width: 312px;
+    padding-top: 48px;
+    background-color: var(--footer-background-color);
+    border-radius: 24px;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .longItem {
+    width: 608px;
+    height: 608px;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+}
+
+.smallItem:hover,
+.longItem:hover,
+.container:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width: 744px) {
+  .refToProd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+}
+
+.refToTrade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1440px) {
+  .desktopInfo {
+    padding-top: 48px;
+    padding-left: 48px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .leftBar {
+    display: flex;
+  }
+}
+
+.description {
+  display: none;
+}
+@media only screen and (min-width: 744px) {
+  .description {
+    display: block;
+    color: var(--main-text-color);
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+.arrowIcon {
+  display: none;
+}
+@media only screen and (min-width: 744px) {
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
+.bigTitle {
+  color: var(--main-text-color);
+  background: linear-gradient(
+    180deg,
+    #ffd700 0%,
+    #ffcc00 25%,
+    #ffb300 50%,
+    #ff9900 75%,
+    #ffd700 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 24px;
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.72px;
+  text-align: center;
+}
+@media only screen and (min-width: 744px) {
+  .bigTitle {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bigTitle {
+    font-size: 28px;
+  }
+}
+.macImg {
+  width: 155px;
+  height: 111px;
+}
+@media only screen and (min-width: 744px) {
+  .macImg {
+    width: 312px;
+    height: 224px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .macImg {
+    width: 364px;
+    height: 262px;
+  }
+}
+.iphoneImg {
+  width: 101px;
+  height: 129pxx;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 744px) {
+  .iphoneImg {
+    width: 262px;
+    height: 333px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .iphoneImg {
+    width: 449px;
+    height: 560px;
+    padding-top: 48px;
+    margin-left: 76px;
+  }
+}
+.ipadImg {
+  width: 122px;
+  height: 135px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 744px) {
+  .ipadImg {
+    width: 307px;
+    height: 335px;
+    margin-left: 48px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .ipadImg {
+    width: 449px;
+    height: 543px;
+    padding-top: 48px;
+  }
+}
+.airPodsImg {
+  width: 107px;
+  height: 130px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 744px) {
+  .airPodsImg {
+    width: 260px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .airPodsImg {
+    width: 260px;
+    height: 315px;
+  }
+}
+.container {
+  width: 342px;
+  height: 182px;
+  background-color: var(--footer-background-color);
+  border-radius: 24px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+  transition: transform 0.4s;
+}
+@media only screen and (min-width: 744px) {
+  .container {
+    width: 648px;
+    height: 331px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    width: 1240px;
+    height: 331px;
+  }
+}
+
+.tradeInImgGold {
+  width: 106px;
+  height: 105px;
+}
+@media only screen and (min-width: 744px) {
+  .tradeInImgGold {
+    width: 176px;
+    height: 174px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .tradeInImgGold {
+    width: 306px;
+    height: 302px;
+  }
+}
+.tradeInImg {
+  width: 106px;
+  height: 92px;
+}
+@media only screen and (min-width: 744px) {
+  .tradeInImg {
+    width: 176px;
+    height: 180px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .tradeInImg {
+    width: 306px;
+    height: 302px;
+  }
+}
