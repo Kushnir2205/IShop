@@ -3,6 +3,12 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { SiTelegram } from "react-icons/si";
 import s from "./TheFooter.module.css";
+import { BsPhone } from "react-icons/bs";
+import { AiOutlineTablet } from "react-icons/ai";
+import { RiMacbookLine } from "react-icons/ri";
+import { TbDeviceAirpods } from "react-icons/tb";
+import { RiExchangeLine } from "react-icons/ri";
+import { BiInfoCircle } from "react-icons/bi";
 import ListNav from "../ListNav/ListNav";
 
 const TheFooter = () => {
@@ -16,7 +22,44 @@ const TheFooter = () => {
         </li>
         <li className={s.footerItems}>
           <h2 className={s.footerTitle}>Категорії:</h2>
-          <ListNav isHeader={false} />
+          <ul className={s.footerSubList}>
+            <li>
+              <Link className={s.footerRefs} href="/iphone">
+                <BsPhone className={s.devIcon} />
+                IPhone
+              </Link>
+            </li>
+            <li>
+              <Link className={s.footerRefs} href="/ipad">
+                <AiOutlineTablet className={s.devIcon} />
+                IPad
+              </Link>
+            </li>
+            <li>
+              <Link className={s.footerRefs} href="/macbook">
+                <RiMacbookLine className={s.devIcon} />
+                MacBook
+              </Link>
+            </li>
+            <li>
+              <Link className={s.footerRefs} href="/airpods">
+                <TbDeviceAirpods className={s.devIcon} />
+                Airpods
+              </Link>
+            </li>
+            <li>
+              <Link className={s.footerRefs} href="/tradeIn">
+                <RiExchangeLine className={s.devIcon} />
+                Trade in
+              </Link>
+            </li>
+            <li>
+              <Link className={s.footerRefs} href="/aboutUs">
+                <BiInfoCircle className={s.devIcon} />
+                Про нас
+              </Link>
+            </li>
+          </ul>
         </li>
         <li className={s.footerItems}>
           <h2 className={s.footerTitle}>Контакти:</h2>
