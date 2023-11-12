@@ -5,9 +5,11 @@ import ProductGritItem from "./ProductGridItem/ProductGritItem";
 const ProductGrid = () => {
   return (
     <>
-      <div className={s.list}>
-        <ProductGritItem />
-      </div>
+      <section>
+        <div className={s.list}>
+          <ProductGritItem />
+        </div>
+      </section>
     </>
   );
 };

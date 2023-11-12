@@ -1,0 +1,26 @@
+.videoList {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.videoItem {
+  width: 350px;
+  height: 550px;
+  text-align: center;
+  margin-bottom: 100px;
+  transition: transform 0.3s;
+}
+.videoItem:hover {
+  transform: scale(1.1);
+}
+.video {
+  border-radius: 20%;
+}
+.videoItemTwo {
+  display: none;
+}
+@media only screen and (min-width: 744px) {
+  .videoItemTwo {
+    display: block;
+  }
+}
