@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import goldIphone from "../../../public/assets/img/tradeIn/gold_iphone.png";
 import box from "../../../public/assets/img/tradeIn/iphone_in_box.png";
 import mac from "../../../public/assets/img/slider/2.png";
@@ -9,11 +9,25 @@ import iphone from "../../../public/assets/img/slider/1.png";
 import ipad from "../../../public/assets/img/tradeIn/ipad.png";
 import airpods from "../../../public/assets/img/slider/3.png";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { useDeviceMedia } from "@/hooks/useDeviceMEdia";
 import s from "./ProductGridItem.module.css";
 
-const ProductGritItem = () => {
-  const { isMobile, isTablet, isDesktop } = useDeviceMedia();
+const ProductGridItem = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth < 744);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <ul className={s.barList}>
@@ -90,4 +104,4 @@ const ProductGritItem = () => {
   );
 };
 
-export default ProductGritItem;
+export default ProductGridItem;
