@@ -1,15 +1,13 @@
 import React from "react";
 import s from "./ProductGrid.module.css";
-import ProductGritItem from "./ProductGridItem/ProductGritItem";
+import ProductGridItem from "./ProductGridItem/ProductGridItem";
 
 const ProductGrid = () => {
   return (
     <>
-      <section>
-        <div className={s.list}>
-          <ProductGritItem />
-        </div>
-      </section>
+      <div className={s.list}>
+        <ProductGridItem />
+      </div>
     </>
   );
 };
