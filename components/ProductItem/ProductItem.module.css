@@ -1,11 +1,18 @@
 .productItem {
   position: relative;
-  width: 292px;
+  width: 342px;
   background-color: var(--footer-background-color);
   border-radius: 24px;
   padding: 20px;
   transition: transform 0.6s;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1440px) {
+  .productItem {
+    width: 292px;
+    padding: 20px;
+  }
 }
 .productItem:hover {
   transform: scale(1.1);
