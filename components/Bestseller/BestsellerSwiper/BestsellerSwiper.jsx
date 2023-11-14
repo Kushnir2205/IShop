@@ -10,11 +10,12 @@ import s from "./BestsellerSwiper.module.css";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import ProductItem from "@/components/ProductItem/ProductItem";
 import { useDeviceMedia } from "@/hooks/useDeviceMEdia";
+import { useMedia } from "react-use";
+import { screen } from "@/utils/screens";
 
 const BestsellerSwiper = ({ products }) => {
   const [isMobileClient, setIsMobileClient] = useState(false);
   const { isMobile, isTablet, isDesktop } = useDeviceMedia();
-
   useEffect(() => {
     setIsMobileClient(isMobile);
   }, [isMobile]);
