@@ -1,5 +1,6 @@
 import s from "./Bestseller.module.css";
 import ProductItem from "../ProductItem/ProductItem";
+import BestsellerSwiper from "./BestsellerSwiper/BestsellerSwiper";
 
 const Bestseller = () => {
   const products = [
@@ -25,7 +26,7 @@ const Bestseller = () => {
       price: "$1600",
     },
     {
-      id: 3,
+      id: 4,
       name: "Apple iPhone 15 Pro 128GB",
       color: "Midnight",
       image: "/assets/img/slider/1.png",
@@ -39,11 +40,8 @@ const Bestseller = () => {
         <p className={s.bestsellerTitle}>Хіт продажу</p>
         <p className={s.bestsellerTitle}>Новинки</p>
       </div>
-      <ul className={s.productList}>
-        {products.map((product) => (
-          <ProductItem key={product.id} product={product} />
-        ))}
-      </ul>
+
+      <BestsellerSwiper products={products} />
       {/* </section> */}
     </>
   );

@@ -4,6 +4,8 @@ import ButtonTheme from "../ButtonTheme/ButtonTheme";
 import { BsSearch } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import BurgerMenuBtn from "../UI/BurgerMenuBtn/BurgerMenuBtn";
+import { RiExchangeLine } from "react-icons/ri";
+import DesktopSearchBtn from "../UI/DesktopSearchBtn/DesktopSearchBtn";
 
 const TheHeader = () => {
   return (
@@ -35,6 +37,11 @@ const TheHeader = () => {
             </Link>
           </li>
           <li className={s.navItem}>
+            <Link className={s.linkItem} href="/tradeIn">
+              Trade in
+            </Link>
+          </li>
+          <li className={s.navItem}>
             <Link className={s.linkItem} href="/aboutUs">
               Про нас
             </Link>
@@ -46,7 +53,7 @@ const TheHeader = () => {
           <ButtonTheme />
         </li>
         <li className={s.hoverIcon}>
-          <BsSearch className={s.headerIcon} />
+          <DesktopSearchBtn customClass={s.headerIcon} />
         </li>
         <li className={s.hoverIcon}>
           <HiShoppingCart className={s.headerIcon} />
