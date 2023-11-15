@@ -6,6 +6,13 @@
   padding-top: 48px;
   min-height: 640px;
 }
+@media only screen and (min-width: 744px) {
+  .productList {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 81px;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .productList {
     display: flex;
