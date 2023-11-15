@@ -1,7 +1,7 @@
 .videoList {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 .videoItem {
   width: 350px;
@@ -10,10 +10,24 @@
   margin-bottom: 100px;
   transition: transform 0.3s;
 }
+/* @media only screen and (min-width: 744px) {
+  .videoItem {
+    width: 300px;
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .videoItem {
+    width: 350px;
+    height: 550px;
+  }
+} */
 .videoItem:hover {
   transform: scale(1.1);
 }
 .video {
+  width: 350px;
+  height: 550px;
   border-radius: 20%;
 }
 .videoItemTwo {

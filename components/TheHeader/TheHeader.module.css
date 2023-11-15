@@ -8,11 +8,11 @@
   padding: 48px 24px 24px 24px;
 }
 
-@media only screen and (min-width: 744px) {
+/* @media only screen and (min-width: 744px) {
   .wrapper {
     min-width: 744px;
   }
-}
+} */
 @media only screen and (min-width: 1440px) {
   .wrapper {
     padding: 41px 100px 34px 100px;
