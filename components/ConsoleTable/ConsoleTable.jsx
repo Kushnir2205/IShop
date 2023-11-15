@@ -3,6 +3,7 @@ import {
   MaterialReactTable,
   useMaterialReactTable,
 } from "material-react-table";
+import Image from "next/image";
 import { useMemo } from "react";
 
 const ConsoleTable = ({ data }) => {
@@ -43,11 +44,22 @@ const ConsoleTable = ({ data }) => {
         header: "Price",
         size: 150,
       },
-      // {
-      //   accessorKey: "poster",
-      //   header: "Photo",
-      //   size: 150,
-      // },
+
+      {
+        accessorKey: "poster",
+        header: "Photo",
+        size: 150,
+        Cell: ({ renderedCellValue, row }) => (
+          <Image
+            alt="avatar"
+            height={30}
+            width={30}
+            src={`https://ishop-backend-5skc.onrender.com/gudgets/2023-11-15T00:42:20.024Z-892534793_iPhone-15-Pro-Review-Featured-Gear.webp`}
+            loading="lazy"
+            style={{ borderRadius: "50%" }}
+          />
+        ),
+      },
       {
         accessorKey: "available",
         header: "Available",
