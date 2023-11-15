@@ -12,39 +12,18 @@ const ConsoleTable = ({ data }) => {
       {
         accessorKey: "_id", //access nested data with dot notation
         header: "ID",
-        size: 150,
+        size: 50,
       },
       {
         accessorKey: "name", //access nested data with dot notation
         header: "Name",
-        size: 150,
-      },
-      {
-        accessorKey: "type",
-        header: "Type",
-        size: 150,
-      },
-      {
-        accessorKey: "color",
-        header: "Color",
-        size: 150,
-      },
-      {
-        accessorKey: "storage",
-        header: "Storage",
-        size: 150,
-      },
-      {
-        accessorKey: "version",
-        header: "Version",
-        size: 150,
+        size: 50,
       },
       {
         accessorKey: "price",
         header: "Price",
-        size: 150,
+        size: 50,
       },
-
       {
         accessorKey: "poster",
         header: "Photo",
@@ -61,14 +40,35 @@ const ConsoleTable = ({ data }) => {
         ),
       },
       {
+        accessorKey: "type",
+        header: "Type",
+        size: 50,
+      },
+      {
+        accessorKey: "color",
+        header: "Color",
+        size: 50,
+      },
+      {
+        accessorKey: "storage",
+        header: "Storage",
+        size: 150,
+      },
+      {
+        accessorKey: "version",
+        header: "Version",
+        size: 50,
+      },
+
+      {
         accessorKey: "available",
         header: "Available",
-        size: 150,
+        size: 50,
       },
       {
         accessorKey: "condition",
         header: "Condition",
-        size: 150,
+        size: 50,
       },
     ],
     []
