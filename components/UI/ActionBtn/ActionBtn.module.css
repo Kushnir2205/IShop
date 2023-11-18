@@ -1,0 +1,17 @@
+.consoleBtn {
+  padding: 6px 24px;
+  border-radius: 10%;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.consoleBtn:disabled {
+  background-color: gray;
+  color: rgb(171, 171, 171);
+  cursor: auto;
+}
+
+.delete {
+  background-color: rgb(255, 121, 121);
+  color: white;
+}
