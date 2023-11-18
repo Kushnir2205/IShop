@@ -7,3 +7,8 @@ export const fetchAllGudget = async () => {
   const { data } = await instance.get("/store");
   return data;
 };
+
+export const fetchDeleteItem = async (items) => {
+  const { data } = await instance.delete("/", items);
+  return data;
+};

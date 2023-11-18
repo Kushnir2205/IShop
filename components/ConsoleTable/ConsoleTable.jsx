@@ -1,4 +1,5 @@
 "use client";
+import { fetchDeleteItem } from "@/services/api/api";
 import {
   MaterialReactTable,
   useMaterialReactTable,
@@ -113,7 +114,10 @@ const ConsoleTable = ({ data }) => {
     // ],
     renderTopToolbarCustomActions: ({ table }) => {
       const handleDelete = () => {
-        console.log("Delete Item");
+        const selectedId = table
+          .getSelectedRowModel()
+          .flatRows.map((row) => row.getValue("_id"));
+        fetchDeleteItem(selectedId);
       };
       const handleAdd = () => {
         console.log("Add Item");
@@ -126,6 +130,9 @@ const ConsoleTable = ({ data }) => {
               name={"Delete"}
               customClass={"delete"}
               func={handleDelete}
+              isActive={
+                table.getIsSomeRowsSelected() || table.getIsAllRowsSelected()
+              }
             />
           </li>
           <li>
