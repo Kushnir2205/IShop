@@ -6,6 +6,7 @@ import {
 import Image from "next/image";
 import { useMemo } from "react";
 import ActionBtn from "../UI/ActionBtn/ActionBtn";
+import s from "./ConsoleTable.module.css";
 
 const ConsoleTable = ({ data }) => {
   const columns = useMemo(
@@ -110,21 +111,34 @@ const ConsoleTable = ({ data }) => {
     //     Send Email
     //   </MenuItem>,
     // ],
-    // renderTopToolbar: ({ table }) => {
-    //   const handleDelete = () => {
-    //     console.log("Delete Item");
-    //   };
+    renderTopToolbarCustomActions: ({ table }) => {
+      const handleDelete = () => {
+        console.log("Delete Item");
+      };
+      const handleAdd = () => {
+        console.log("Add Item");
+      };
 
-    //   return (
-    //     <div>
-    //       <ActionBtn
-    //         name={"Delete"}
-    //         customClass={"delete"}
-    //         func={handleDelete}
-    //       />
-    //     </div>
-    //   );
-    // },
+      return (
+        <ul className={s.buttonList}>
+          <li>
+            <ActionBtn
+              name={"Delete"}
+              customClass={"delete"}
+              func={handleDelete}
+            />
+          </li>
+          <li>
+            <ActionBtn
+              name={"Add item"}
+              customClass={"add"}
+              func={handleAdd}
+              isActive={true}
+            />
+          </li>
+        </ul>
+      );
+    },
     // enableColumnFilterModes: true,
   });
 

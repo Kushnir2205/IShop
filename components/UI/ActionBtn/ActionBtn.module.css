@@ -1,9 +1,21 @@
 .consoleBtn {
-  padding: 6px 24px;
-  border-radius: 10%;
-  border: 1px solid black;
+  padding: 9px 24px;
+  border: none;
+  border-radius: 45px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
   font-size: 14px;
   font-weight: 500;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.consoleBtn:not([disabled]):hover {
+  color: #fff;
+  transform: translateY(-4px);
 }
 .consoleBtn:disabled {
   background-color: gray;
@@ -11,7 +23,12 @@
   cursor: auto;
 }
 
-.delete {
-  background-color: rgb(255, 121, 121);
-  color: white;
+.delete:not([disabled]):hover {
+  background-color: rgb(208, 70, 70);
+  box-shadow: 0px 9px 12px rgba(225, 64, 64, 0.4);
+}
+
+.add:not([disabled]):hover {
+  background-color: rgb(56, 177, 72);
+  box-shadow: 0px 9px 12px rgba(46, 229, 157, 0.4);
 }
