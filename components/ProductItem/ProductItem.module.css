@@ -54,14 +54,15 @@
 }
 .productPrice {
   color: var(--price-color);
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     #ffd700 0%,
     #ffcc00 25%,
     #ffb300 50%,
     #ff9900 75%,
     #ffd700 100%
-  );
+  ); */
+  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -76,33 +77,26 @@
   transition: fill 0.3s;
 }
 .iconCart:hover {
-  fill: var(--price-color);
+  fill: #a38a17;
 }
 /* ----- overlay */
 
 .buyProduct {
   display: block;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
 
   width: calc(100% - 40px);
   color: #717fff;
   color: var(--main-text-color);
-  background: linear-gradient(
-    180deg,
-    #ffd700 0%,
-    #ffcc00 25%,
-    #ffb300 50%,
-    #ff9900 75%,
-    #ffd700 100%
-  );
+  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 18px 30px;
 
   border-radius: 16px;
-  border: 2px solid #ffcc00;
+  border: 2px solid #a38a17;
 }
 
 .cardOverlay {
