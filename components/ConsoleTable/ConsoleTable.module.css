@@ -4,3 +4,20 @@
   gap: 14px;
   flex-direction: row-reverse;
 }
+
+.actionMenuItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+}
+.actionMenuItem:hover {
+  background-color: rgb(226, 225, 225);
+  cursor: pointer;
+}
+
+.actionMenuItem > svg {
+  width: 15px;
+  height: 15px;
+}

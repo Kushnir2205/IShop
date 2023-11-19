@@ -9,6 +9,12 @@ export const fetchAllGudget = async () => {
 };
 
 export const fetchDeleteItem = async (items) => {
-  const { data } = await instance.delete("/", items);
+  const jsonData = JSON.stringify({ gudgetIds: items });
+
+  const { data } = await instance.post("/store/delete", jsonData, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   return data;
 };

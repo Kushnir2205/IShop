@@ -9,6 +9,9 @@ import { useMemo } from "react";
 import ActionBtn from "../UI/ActionBtn/ActionBtn";
 import s from "./ConsoleTable.module.css";
 
+import { FaTrash, FaEdit } from "react-icons/fa";
+import { MenuItem } from "@mui/material";
+
 const ConsoleTable = ({ data }) => {
   const columns = useMemo(
     () => [
@@ -84,34 +87,34 @@ const ConsoleTable = ({ data }) => {
     enableColumnPinning: true,
     enableRowSelection: true,
     enableRowActions: true,
-    // renderRowActionMenuItems: ({ closeMenu }) => [
-    //   <MenuItem
-    //     key={0}
-    //     onClick={() => {
-    //       // View profile logic...
-    //       closeMenu();
-    //     }}
-    //     sx={{ m: 0 }}
-    //   >
-    //     <ListItemIcon>
-    //       <AccountCircle />
-    //     </ListItemIcon>
-    //     View Profile
-    //   </MenuItem>,
-    //   <MenuItem
-    //     key={1}
-    //     onClick={() => {
-    //       // Send email logic...
-    //       closeMenu();
-    //     }}
-    //     sx={{ m: 0 }}
-    //   >
-    //     <ListItemIcon>
-    //       <Send />
-    //     </ListItemIcon>
-    //     Send Email
-    //   </MenuItem>,
-    // ],
+    renderRowActionMenuItems: ({ closeMenu, row }) => [
+      <MenuItem
+        className={s.actionMenuItem}
+        key={0}
+        onClick={() => {
+          // View profile logic...
+          closeMenu();
+        }}
+        sx={{ m: 0 }}
+      >
+        <FaEdit />
+        <p>Edit</p>
+      </MenuItem>,
+      <MenuItem
+        className={s.actionMenuItem}
+        key={1}
+        onClick={() => {
+          const selectedItem = row.getValue("_id");
+          fetchDeleteItem([selectedItem]);
+          closeMenu();
+        }}
+        sx={{ m: 0 }}
+      >
+        <FaTrash />
+        <p>Delete</p>
+      </MenuItem>,
+    ],
+
     renderTopToolbarCustomActions: ({ table }) => {
       const handleDelete = () => {
         const selectedId = table
