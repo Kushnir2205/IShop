@@ -119,14 +119,8 @@
 
 .bigTitle {
   color: var(--main-text-color);
-  background: linear-gradient(
-    180deg,
-    #ffd700 0%,
-    #ffcc00 25%,
-    #ffb300 50%,
-    #ff9900 75%,
-    #ffd700 100%
-  );
+  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
+  /* background: linear-gradient(180deg, #8e7e6b, #ac9b87, #e5d4bc); */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
