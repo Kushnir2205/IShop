@@ -14,7 +14,6 @@ import { MenuItem } from "@mui/material";
 import Link from "next/link";
 
 const ConsoleTable = ({ data }) => {
-  console.log(data);
   const columns = useMemo(
     () => [
       {
@@ -91,7 +90,10 @@ const ConsoleTable = ({ data }) => {
     enableRowActions: true,
     renderRowActionMenuItems: ({ closeMenu, row }) => [
       <MenuItem className={s.actionMenuItem} key={0} sx={{ m: 0 }}>
-        <Link href="/console/edit" className={s.actionMenuItemLink}>
+        <Link
+          href={`console/edit/${row.getValue("_id")}`}
+          className={s.actionMenuItemLink}
+        >
           <FaEdit />
           <p>Edit</p>
         </Link>

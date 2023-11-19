@@ -8,6 +8,11 @@ export const fetchAllGudget = async () => {
   return data;
 };
 
+export const fetchById = async (gudgetId) => {
+  const { data } = await instance.get(`/store/${gudgetId}`);
+  return data;
+};
+
 export const fetchDeleteItem = async (items) => {
   const jsonData = JSON.stringify({ gudgetIds: items });
 
