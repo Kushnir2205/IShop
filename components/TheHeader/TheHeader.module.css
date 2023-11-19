@@ -86,7 +86,7 @@
 
 .logo:hover,
 .linkItem:hover {
-  color: var(--price-color);
+  color: #d0af12;
 }
 
 .iconsList {
@@ -102,8 +102,8 @@
   cursor: pointer;
 }
 .headerIcon:hover {
-  fill: var(--price-color);
-  stroke: var(--price-color);
+  fill: #d0af12;
+  stroke: #d0af12;
 }
 
 @media only screen and (min-width: 1440px) {

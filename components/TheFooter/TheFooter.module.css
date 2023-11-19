@@ -51,7 +51,7 @@
   }
 }
 .footerLogo:hover {
-  color: var(--price-color);
+  color: #d0af12;
 }
 .footerTitle {
   text-align: center;
@@ -64,8 +64,8 @@
   transition: color 0.3s;
 }
 .footerRefs:hover {
-  color: var(--price-color);
-  fill: var(--price-color);
+  color: #d0af12;
+  fill: #d0af12;
 }
 
 .footerSubList {
