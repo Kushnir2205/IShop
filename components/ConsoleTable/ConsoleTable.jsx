@@ -11,8 +11,10 @@ import s from "./ConsoleTable.module.css";
 
 import { FaTrash, FaEdit } from "react-icons/fa";
 import { MenuItem } from "@mui/material";
+import Link from "next/link";
 
 const ConsoleTable = ({ data }) => {
+  console.log(data);
   const columns = useMemo(
     () => [
       {
@@ -88,17 +90,11 @@ const ConsoleTable = ({ data }) => {
     enableRowSelection: true,
     enableRowActions: true,
     renderRowActionMenuItems: ({ closeMenu, row }) => [
-      <MenuItem
-        className={s.actionMenuItem}
-        key={0}
-        onClick={() => {
-          // View profile logic...
-          closeMenu();
-        }}
-        sx={{ m: 0 }}
-      >
-        <FaEdit />
-        <p>Edit</p>
+      <MenuItem className={s.actionMenuItem} key={0} sx={{ m: 0 }}>
+        <Link href="/console/edit" className={s.actionMenuItemLink}>
+          <FaEdit />
+          <p>Edit</p>
+        </Link>
       </MenuItem>,
       <MenuItem
         className={s.actionMenuItem}
