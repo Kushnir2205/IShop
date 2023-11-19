@@ -1,12 +1,20 @@
 "use client";
+import { fetchDeleteItem } from "@/services/api/api";
 import {
   MaterialReactTable,
   useMaterialReactTable,
 } from "material-react-table";
 import Image from "next/image";
 import { useMemo } from "react";
+import ActionBtn from "../UI/ActionBtn/ActionBtn";
+import s from "./ConsoleTable.module.css";
+
+import { FaTrash, FaEdit } from "react-icons/fa";
+import { MenuItem } from "@mui/material";
+import Link from "next/link";
 
 const ConsoleTable = ({ data }) => {
+  console.log(data);
   const columns = useMemo(
     () => [
       {
@@ -81,99 +89,62 @@ const ConsoleTable = ({ data }) => {
     enableColumnPinning: true,
     enableRowSelection: true,
     enableRowActions: true,
-    // renderRowActionMenuItems: ({ closeMenu }) => [
-    //   <MenuItem
-    //     key={0}
-    //     onClick={() => {
-    //       // View profile logic...
-    //       closeMenu();
-    //     }}
-    //     sx={{ m: 0 }}
-    //   >
-    //     <ListItemIcon>
-    //       <AccountCircle />
-    //     </ListItemIcon>
-    //     View Profile
-    //   </MenuItem>,
-    //   <MenuItem
-    //     key={1}
-    //     onClick={() => {
-    //       // Send email logic...
-    //       closeMenu();
-    //     }}
-    //     sx={{ m: 0 }}
-    //   >
-    //     <ListItemIcon>
-    //       <Send />
-    //     </ListItemIcon>
-    //     Send Email
-    //   </MenuItem>,
-    // ],
-    // renderTopToolbar: ({ table }) => {
-    //   const handleDeactivate = () => {
-    //     table.getSelectedRowModel().flatRows.map((row) => {
-    //       alert("deactivating " + row.getValue("name"));
-    //     });
-    //   };
+    renderRowActionMenuItems: ({ closeMenu, row }) => [
+      <MenuItem className={s.actionMenuItem} key={0} sx={{ m: 0 }}>
+        <Link href="/console/edit" className={s.actionMenuItemLink}>
+          <FaEdit />
+          <p>Edit</p>
+        </Link>
+      </MenuItem>,
+      <MenuItem
+        className={s.actionMenuItem}
+        key={1}
+        onClick={() => {
+          const selectedItem = row.getValue("_id");
+          fetchDeleteItem([selectedItem]);
+          closeMenu();
+        }}
+        sx={{ m: 0 }}
+      >
+        <FaTrash />
+        <p>Delete</p>
+      </MenuItem>,
+    ],
 
-    //   const handleActivate = () => {
-    //     table.getSelectedRowModel().flatRows.map((row) => {
-    //       alert("activating " + row.getValue("name"));
-    //     });
-    //   };
+    renderTopToolbarCustomActions: ({ table }) => {
+      const handleDelete = () => {
+        const selectedId = table
+          .getSelectedRowModel()
+          .flatRows.map((row) => row.getValue("_id"));
+        fetchDeleteItem(selectedId);
+      };
+      const handleAdd = () => {
+        console.log("Add Item");
+      };
 
-    //   const handleContact = () => {
-    //     table.getSelectedRowModel().flatRows.map((row) => {
-    //       alert("contact " + row.getValue("name"));
-    //     });
-    //   };
-
-    //   return (
-    //     <Box
-    //       sx={(theme) => ({
-    //         backgroundColor: lighten(theme.palette.background.default, 0.05),
-    //         display: "flex",
-    //         gap: "0.5rem",
-    //         p: "8px",
-    //         justifyContent: "space-between",
-    //       })}
-    //     >
-    //       <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-    //         {/* import MRT sub-components */}
-    //         <MRT_GlobalFilterTextField table={table} />
-    //         <MRT_ToggleFiltersButton table={table} />
-    //       </Box>
-    //       <Box>
-    //         <Box sx={{ display: "flex", gap: "0.5rem" }}>
-    //           <Button
-    //             color="error"
-    //             disabled={!table.getIsSomeRowsSelected()}
-    //             onClick={handleDeactivate}
-    //             variant="contained"
-    //           >
-    //             Deactivate
-    //           </Button>
-    //           <Button
-    //             color="success"
-    //             disabled={!table.getIsSomeRowsSelected()}
-    //             onClick={handleActivate}
-    //             variant="contained"
-    //           >
-    //             Activate
-    //           </Button>
-    //           <Button
-    //             color="info"
-    //             disabled={!table.getIsSomeRowsSelected()}
-    //             onClick={handleContact}
-    //             variant="contained"
-    //           >
-    //             Contact
-    //           </Button>
-    //         </Box>
-    //       </Box>
-    //     </Box>
-    //   );
-    // },
+      return (
+        <ul className={s.buttonList}>
+          <li>
+            <ActionBtn
+              name={"Delete"}
+              customClass={"delete"}
+              func={handleDelete}
+              isActive={
+                table.getIsSomeRowsSelected() || table.getIsAllRowsSelected()
+              }
+            />
+          </li>
+          <li>
+            <ActionBtn
+              name={"Add item"}
+              customClass={"add"}
+              func={handleAdd}
+              isActive={true}
+            />
+          </li>
+        </ul>
+      );
+    },
     // enableColumnFilterModes: true,
   });
 
