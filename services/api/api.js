@@ -5,7 +5,7 @@ const instance = axios.create({
 });
 
 export const fetchAllGudget = async (params) => {
-  const { data } = await instance.get("/store");
+  const { data } = await instance.get("/store", { params });
   return data;
 };
 
