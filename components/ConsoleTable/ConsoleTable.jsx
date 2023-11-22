@@ -10,7 +10,7 @@ import ActionBtn from "../UI/ActionBtn/ActionBtn";
 import s from "./ConsoleTable.module.css";
 
 import { FaTrash, FaEdit } from "react-icons/fa";
-import { MenuItem } from "@mui/material";
+import { MenuItem, Box, Typography } from "@mui/material";
 import Link from "next/link";
 
 const ConsoleTable = ({ data }) => {
@@ -31,21 +31,21 @@ const ConsoleTable = ({ data }) => {
         header: "Price",
         size: 50,
       },
-      {
-        accessorKey: "poster",
-        header: "Photo",
-        size: 150,
-        Cell: ({ renderedCellValue, row }) => (
-          <Image
-            alt={row.original.name}
-            height={65}
-            width={100}
-            src={row.original.poster[0]}
-            loading="lazy"
-            style={{ borderRadius: "20%" }}
-          />
-        ),
-      },
+      // {
+      //   accessorKey: "poster",
+      //   header: "Photo",
+      //   size: 150,
+      //   Cell: ({ renderedCellValue, row }) => (
+      //     <Image
+      //       alt={row.original.name}
+      //       height={65}
+      //       width={100}
+      //       src={row.original.poster[0]}
+      //       loading="lazy"
+      //       style={{ borderRadius: "20%" }}
+      //     />
+      //   ),
+      // },
       {
         accessorKey: "type",
         header: "Type",
@@ -112,7 +112,26 @@ const ConsoleTable = ({ data }) => {
         <p>Delete</p>
       </MenuItem>,
     ],
-
+    renderDetailPanel: ({ row }) => (
+      <Box
+        sx={{
+          display: "flex",
+          gap: "10px",
+        }}
+      >
+        {row.original.poster.map((photo) => (
+          <Image
+            key={photo}
+            alt={"Gudget"}
+            height={100}
+            width={80}
+            src={photo}
+            loading="lazy"
+            style={{ borderRadius: "10%" }}
+          />
+        ))}
+      </Box>
+    ),
     renderTopToolbarCustomActions: ({ table }) => {
       const handleDelete = () => {
         const selectedId = table
