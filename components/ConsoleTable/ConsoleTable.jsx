@@ -31,24 +31,9 @@ const ConsoleTable = ({ data }) => {
         header: "Price",
         size: 50,
       },
-      // {
-      //   accessorKey: "poster",
-      //   header: "Photo",
-      //   size: 150,
-      //   Cell: ({ renderedCellValue, row }) => (
-      //     <Image
-      //       alt={row.original.name}
-      //       height={65}
-      //       width={100}
-      //       src={row.original.poster[0]}
-      //       loading="lazy"
-      //       style={{ borderRadius: "20%" }}
-      //     />
-      //   ),
-      // },
       {
-        accessorKey: "type",
-        header: "Type",
+        accessorKey: "category",
+        header: "Category",
         size: 50,
       },
       {

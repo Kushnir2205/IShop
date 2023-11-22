@@ -1,9 +1,10 @@
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "https://ishop-backend-5skc.onrender.com/api",
+  // baseURL: "https://ishop-backend-5skc.onrender.com/api",
+  baseURL: "http://localhost:4000/api",
 });
 
-export const fetchAllGudget = async () => {
+export const fetchAllGudget = async (params) => {
   const { data } = await instance.get("/store");
   return data;
 };
