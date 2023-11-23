@@ -1,8 +1,7 @@
 import axios from "axios";
-const { FETCH_URL } = process.env;
 
 const instance = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://ishop-backend-5skc.onrender.com/api",
 });
 
 export const fetchAllGudget = async (params) => {

@@ -10,7 +10,7 @@ const EditFormPage = () => {
   return (
     <section className={s.section}>
       <h3 className={s.title}>Edit Product</h3>
-      {/* <ConsoleEditForm gudgetId={gudgetId} /> */}
+      <ConsoleEditForm gudgetId={gudgetId} />
     </section>
   );
 };
