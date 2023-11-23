@@ -5,6 +5,8 @@ import TheHeader from "@/components/TheHeader/TheHeader";
 import { Inter } from "next/font/google";
 import TheFooter from "@/components/TheFooter/TheFooter";
 import ThemeProvider from "@/providers/ThemeProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,12 @@ export default function RootLayout({ children }) {
           <TheHeader />
           <main>{children}</main>
           <TheFooter />
+          <ToastContainer
+            autoClose={2000}
+            pauseOnHover
+            closeOnClick
+            theme="light"
+          />
         </body>
       </ThemeProvider>
     </html>

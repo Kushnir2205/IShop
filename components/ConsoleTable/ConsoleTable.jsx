@@ -10,11 +10,11 @@ import ActionBtn from "../UI/ActionBtn/ActionBtn";
 import s from "./ConsoleTable.module.css";
 
 import { FaTrash, FaEdit } from "react-icons/fa";
-import { MenuItem } from "@mui/material";
+import { MenuItem, Box, Typography } from "@mui/material";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const ConsoleTable = ({ data }) => {
-  console.log(data);
   const columns = useMemo(
     () => [
       {
@@ -33,23 +33,8 @@ const ConsoleTable = ({ data }) => {
         size: 50,
       },
       {
-        accessorKey: "poster",
-        header: "Photo",
-        size: 150,
-        Cell: ({ renderedCellValue, row }) => (
-          <Image
-            alt={row.original.name}
-            height={65}
-            width={100}
-            src={row.original.poster[0]}
-            loading="lazy"
-            style={{ borderRadius: "20%" }}
-          />
-        ),
-      },
-      {
-        accessorKey: "type",
-        header: "Type",
+        accessorKey: "category",
+        header: "Category",
         size: 50,
       },
       {
@@ -91,7 +76,10 @@ const ConsoleTable = ({ data }) => {
     enableRowActions: true,
     renderRowActionMenuItems: ({ closeMenu, row }) => [
       <MenuItem className={s.actionMenuItem} key={0} sx={{ m: 0 }}>
-        <Link href="/console/edit" className={s.actionMenuItemLink}>
+        <Link
+          href={`console/edit/${row.getValue("_id")}`}
+          className={s.actionMenuItemLink}
+        >
           <FaEdit />
           <p>Edit</p>
         </Link>
@@ -100,8 +88,14 @@ const ConsoleTable = ({ data }) => {
         className={s.actionMenuItem}
         key={1}
         onClick={() => {
-          const selectedItem = row.getValue("_id");
-          fetchDeleteItem([selectedItem]);
+          const gudgetId = row.getValue("_id");
+          fetchDeleteItem(gudgetId)
+            .then(({ message }) => toast.success(message))
+            .catch((e) => {
+              toast.error(
+                "Something went wrong, please reload the page and try again."
+              );
+            });
           closeMenu();
         }}
         sx={{ m: 0 }}
@@ -110,16 +104,48 @@ const ConsoleTable = ({ data }) => {
         <p>Delete</p>
       </MenuItem>,
     ],
-
+    renderDetailPanel: ({ row }) => (
+      <Box
+        sx={{
+          display: "flex",
+          gap: "10px",
+        }}
+      >
+        {row.original.poster.map((photo) => (
+          <Image
+            key={photo}
+            alt={"Gudget"}
+            height={100}
+            width={80}
+            src={photo}
+            loading="lazy"
+            style={{ borderRadius: "10%" }}
+            className={ s.gudgetPhoto}
+          />
+        ))}
+      </Box>
+    ),
     renderTopToolbarCustomActions: ({ table }) => {
-      const handleDelete = () => {
+      const handleDelete = async () => {
         const selectedId = table
           .getSelectedRowModel()
           .flatRows.map((row) => row.getValue("_id"));
-        fetchDeleteItem(selectedId);
+        try {
+          const result = await Promise.any(
+            selectedId.map((gudgetId) => {
+              return fetchDeleteItem(gudgetId);
+            })
+          );
+          toast.success(result.message);
+        } catch (e) {
+          toast.error(
+            "Something went wrong, please reload the page and try again."
+          );
+        }
       };
       const handleAdd = () => {
         console.log("Add Item");
+        toast.success("Add");
       };
 
       return (
@@ -135,12 +161,13 @@ const ConsoleTable = ({ data }) => {
             />
           </li>
           <li>
-            <ActionBtn
-              name={"Add item"}
-              customClass={"add"}
-              func={handleAdd}
-              isActive={true}
-            />
+            <Link href={`console/add`}>
+              <ActionBtn
+                name={"Add item"}
+                customClass={"add"}
+                isActive={true}
+              />
+            </Link>
           </li>
         </ul>
       );

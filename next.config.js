@@ -3,8 +3,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "ishop-backend-5skc.onrender.com",
+        protocol: "http",
+        hostname: "res.cloudinary.com",
         port: "",
         pathname: "/**",
       },

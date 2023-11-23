@@ -1,20 +1,20 @@
 import axios from "axios";
+
 const instance = axios.create({
   baseURL: "https://ishop-backend-5skc.onrender.com/api",
 });
 
-export const fetchAllGudget = async () => {
-  const { data } = await instance.get("/store");
+export const fetchAllGudget = async (params) => {
+  const { data } = await instance.get("/store", { params });
   return data;
 };
 
-export const fetchDeleteItem = async (items) => {
-  const jsonData = JSON.stringify({ gudgetIds: items });
+export const fetchById = async (gudgetId) => {
+  const { data } = await instance.get(`/store/${gudgetId}`);
+  return data;
+};
 
-  const { data } = await instance.post("/store/delete", jsonData, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+export const fetchDeleteItem = async (gudgetId) => {
+  const { data } = await instance.delete(`/store/${gudgetId}`);
   return data;
 };
