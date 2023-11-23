@@ -12,6 +12,7 @@ import s from "./ConsoleTable.module.css";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import { MenuItem, Box, Typography } from "@mui/material";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const ConsoleTable = ({ data }) => {
   const columns = useMemo(
@@ -87,8 +88,14 @@ const ConsoleTable = ({ data }) => {
         className={s.actionMenuItem}
         key={1}
         onClick={() => {
-          const selectedItem = row.getValue("_id");
-          fetchDeleteItem([selectedItem]);
+          const gudgetId = row.getValue("_id");
+          fetchDeleteItem(gudgetId)
+            .then(({ message }) => toast.success(message))
+            .catch((e) => {
+              toast.error(
+                "Something went wrong, please reload the page and try again."
+              );
+            });
           closeMenu();
         }}
         sx={{ m: 0 }}
@@ -118,14 +125,26 @@ const ConsoleTable = ({ data }) => {
       </Box>
     ),
     renderTopToolbarCustomActions: ({ table }) => {
-      const handleDelete = () => {
+      const handleDelete = async () => {
         const selectedId = table
           .getSelectedRowModel()
           .flatRows.map((row) => row.getValue("_id"));
-        fetchDeleteItem(selectedId);
+        try {
+          const result = await Promise.any(
+            selectedId.map((gudgetId) => {
+              return fetchDeleteItem(gudgetId);
+            })
+          );
+          toast.success(result.message);
+        } catch (e) {
+          toast.error(
+            "Something went wrong, please reload the page and try again."
+          );
+        }
       };
       const handleAdd = () => {
         console.log("Add Item");
+        toast.success("Add");
       };
 
       return (
@@ -141,12 +160,13 @@ const ConsoleTable = ({ data }) => {
             />
           </li>
           <li>
-            <ActionBtn
-              name={"Add item"}
-              customClass={"add"}
-              func={handleAdd}
-              isActive={true}
-            />
+            <Link href={`console/add`}>
+              <ActionBtn
+                name={"Add item"}
+                customClass={"add"}
+                isActive={true}
+              />
+            </Link>
           </li>
         </ul>
       );

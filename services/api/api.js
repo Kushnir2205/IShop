@@ -1,6 +1,7 @@
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "https://ishop-backend-5skc.onrender.com/api",
+  // baseURL: "https://ishop-backend-5skc.onrender.com/api",
+  baseURL: "http://localhost:4000/api",
 });
 
 export const fetchAllGudget = async (params) => {
@@ -13,13 +14,7 @@ export const fetchById = async (gudgetId) => {
   return data;
 };
 
-export const fetchDeleteItem = async (items) => {
-  const jsonData = JSON.stringify({ gudgetIds: items });
-
-  const { data } = await instance.post("/store/delete", jsonData, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+export const fetchDeleteItem = async (gudgetId) => {
+  const { data } = await instance.delete(`/store/${gudgetId}`);
   return data;
 };
