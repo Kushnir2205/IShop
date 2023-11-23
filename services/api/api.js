@@ -2,7 +2,7 @@ import axios from "axios";
 const { FETCH_URL } = process.env;
 
 const instance = axios.create({
-  baseURL: FETCH_URL,
+  baseURL: "http://localhost:4000",
 });
 
 export const fetchAllGudget = async (params) => {

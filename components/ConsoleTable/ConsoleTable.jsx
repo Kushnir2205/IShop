@@ -120,6 +120,7 @@ const ConsoleTable = ({ data }) => {
             src={photo}
             loading="lazy"
             style={{ borderRadius: "10%" }}
+            className={ s.gudgetPhoto}
           />
         ))}
       </Box>
