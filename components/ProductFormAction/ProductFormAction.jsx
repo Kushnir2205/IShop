@@ -13,6 +13,7 @@ import FormInput from "../UI/FormInput/FormInput";
 import FormSelect from "../UI/FormSelect/FormSelect";
 import ConsolePhotoEditor from "../ConsolePhotoEditor/ConsolePhotoEditor";
 import ActionBtn from "../UI/ActionBtn/ActionBtn";
+import { fetchAddGudget } from "@/services/api/api";
 
 const ProductFormAction = ({ btnAction, data = ADDFORM }) => {
   const [formData, setFormData] = useState(data);
@@ -23,10 +24,14 @@ const ProductFormAction = ({ btnAction, data = ADDFORM }) => {
 
     setFormData((data) => ({ ...data, [inputName]: inputValue }));
   };
+  const handlePhotoChange = (e) => {
+    setFormData((prevState) => ({ ...prevState, poster: [...e.target.files] }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    fetchAddGudget(formData);
   };
 
   useEffect(() => {
@@ -70,7 +75,12 @@ const ProductFormAction = ({ btnAction, data = ADDFORM }) => {
         />
       </div>
       <div className={s.rightColumn}>
-        <ConsolePhotoEditor />
+        <ConsolePhotoEditor
+          name="poster"
+          value={formData.poster}
+          func={handlePhotoChange}
+          btnAction={btnAction}
+        />
       </div>
       <div className={s.submitBtn}>
         <ActionBtn

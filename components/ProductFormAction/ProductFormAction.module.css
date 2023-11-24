@@ -1,14 +1,29 @@
 .formWrapper {
   position: relative;
   display: flex;
+  min-height: 65vh;
 
   gap: 20px;
   padding-bottom: 60px;
 }
 .leftColumn {
+  width: calc(100% / 2);
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+.leftColumn::after {
+  content: "";
+  width: 1px;
+  height: 85%;
+  background-color: var(--main-text-color);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.rightColumn {
+  width: calc(100% / 2);
 }
 
 .submitBtn {

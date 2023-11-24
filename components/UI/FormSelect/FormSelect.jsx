@@ -14,7 +14,7 @@ const FormSelect = ({ name, options = [], func, value }) => {
       >
         {options.map((opt) => (
           <option value={opt} key={opt}>
-            {opt}
+            {opt.charAt(0).toUpperCase() + opt.slice(1)}
           </option>
         ))}
       </select>

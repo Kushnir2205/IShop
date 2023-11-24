@@ -1,15 +1,3 @@
-export const ADDFORM = {
-  name: "",
-  type: "",
-  color: "",
-  storage: "",
-  version: "",
-  price: "",
-  poster: [],
-  available: "",
-  condition: "",
-};
-
 export const CATEGORY_ITEM = [
   "iphone",
   "ipad",
@@ -28,5 +16,17 @@ export const STORAGE_ITEM = [
   "2 tb",
 ];
 
-export const VERSION_ITEM = ["Standart", "E-sim"];
-export const AVAILABLE_ITEM = ["Yes", "No"];
+export const VERSION_ITEM = ["standart", "e-sim"];
+export const AVAILABLE_ITEM = ["yes", "no"];
+
+export const ADDFORM = {
+  name: "",
+  category: CATEGORY_ITEM[0],
+  color: "",
+  storage: STORAGE_ITEM[0],
+  version: VERSION_ITEM[0],
+  price: "",
+  poster: [],
+  available: AVAILABLE_ITEM[0],
+  condition: "",
+};

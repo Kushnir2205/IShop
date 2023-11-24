@@ -14,6 +14,27 @@ export const fetchById = async (gudgetId) => {
   return data;
 };
 
+export const fetchAddGudget = async (info) => {
+  const form = new FormData();
+
+  for (var key in info) {
+    if (key === "poster" && Array.isArray(info[key])) {
+      info[key].forEach((file, index) => {
+        form.append(key, file);
+      });
+    } else {
+      form.append(key, info[key]);
+    }
+  }
+
+  const { data } = await instance.post("/store", form, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  return data;
+};
+
 export const fetchDeleteItem = async (gudgetId) => {
   const { data } = await instance.delete(`/store/${gudgetId}`);
   return data;
