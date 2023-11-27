@@ -15,3 +15,28 @@
 .photoItem {
   width: calc((100% - (3 * 8px)) / 4);
 }
+
+.label {
+  margin-top: 20px;
+  padding: 7px 40px;
+
+  color: var(--main-background-color);
+  border-radius: 25px;
+  background-color: var(--main-text-color);
+
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.label:hover {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  border: 1px solid var(--main-text-color);
+}
+
+.input {
+  margin: 0 auto;
+  width: 240px;
+
+  display: none;
+}

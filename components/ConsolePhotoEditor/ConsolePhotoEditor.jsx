@@ -4,15 +4,18 @@ import s from "./ConsolePhotoEditor.module.css";
 const ConsolePhotoEditor = ({ name, value = [], func, btnAction }) => {
   return (
     <div>
-      <label htmlFor={name}>Choose Photo:</label>
-      <input
-        type="file"
-        name={name}
-        onChange={func}
-        id={name}
-        multiple={true}
-        accept="image/webp"
-      />
+      <label className={s.label}>
+        <input
+          type="file"
+          name={name}
+          onChange={func}
+          id={name}
+          multiple={true}
+          accept="image/webp"
+          className={s.input}
+        />
+        <span>Attach Files</span>
+      </label>
       {value.length > 0 && (
         <ul className={s.photoList}>
           {value.map((photo) => (
