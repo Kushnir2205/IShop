@@ -15,7 +15,6 @@ const ProductItem = ({ product }) => {
             height={200}
             alt={product.name}
           />
-
           <p className={s.productName}>{product.name}</p>
           <p className={s.productColor}>{product.color}</p>
           <div className={s.priceCart}>

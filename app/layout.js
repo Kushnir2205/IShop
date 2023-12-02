@@ -7,6 +7,7 @@ import TheFooter from "@/components/TheFooter/TheFooter";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Providers } from "@/redux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <body className={inter.className + " container"}>
-          <TheHeader />
-          <main>{children}</main>
-          <TheFooter />
+          <Providers>
+            <TheHeader />
+            <main>{children}</main>
+            <TheFooter />
+          </Providers>
           <ToastContainer
             autoClose={2000}
             pauseOnHover
