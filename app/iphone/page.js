@@ -1,23 +1,8 @@
 import Link from "next/link";
 import phones from "../../mocks/iphones.json";
 import Image from "next/image";
+import Iphones from "@/components/Iphone/Iphones";
 
 export default function Iphone() {
-  return (
-    <>
-      <ul>
-        {phones.iphones.map((iphone) => (
-          <li key={iphone.id}>
-            <Image
-              src={`/assets/img/${iphone.image}.jpg`}
-              alt="photo"
-              width={100}
-              height={100}
-            />
-            <Link href={`${iphone.name}`}>{iphone.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
+  return <Iphones />;
 }

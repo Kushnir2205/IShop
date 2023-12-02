@@ -2,49 +2,49 @@
   "iphones": [
     {
       "id": 1,
-      "name": "iphone 14 Pro Max",
+      "name": "Iphone 14 Pro Max",
       "color": "red",
-      "image": "iphone_14_pro_max"
+      "image": "14_pro_max"
     },
     {
       "id": 2,
-      "name": "iphone 14 Pro",
+      "name": "Iphone 14 Pro",
       "color": "blue",
-      "image": "iphone_14_pro"
+      "image": "14_pro_max"
     },
     {
       "id": 3,
-      "name": "iphone 14 Plus",
+      "name": "Iphone 14 Plus",
       "color": "blue",
-      "image": "iphone_14_plus"
+      "image": "iphone_14"
     },
     {
       "id": 4,
-      "name": "iphone 14",
+      "name": "Iphone 14",
       "color": "blue",
       "image": "iphone_14"
     },
     {
       "id": 5,
-      "name": "iphone 13 Pro Max",
+      "name": "Iphone 13 Pro Max",
       "color": "blue",
-      "image": "iphone_13_pro_max"
+      "image": "iphone-13-pro-max"
     },
     {
       "id": 6,
-      "name": "iphone 13 Pro",
+      "name": "Iphone 13 Pro",
       "color": "blue",
-      "image": "iphone_13_pro"
+      "image": "iphone-13-pro-max"
     },
     {
       "id": 7,
-      "name": "iphone 13",
+      "name": "Iphone 13",
       "color": "blue",
-      "image": "iphone_13"
+      "image": "iphone-13"
     },
     {
       "id": 8,
-      "name": "iphone 12 Pro Max",
+      "name": "Iphone 12 Pro Max",
       "color": "blue",
       "image": "iphone_12_pro_max"
     }

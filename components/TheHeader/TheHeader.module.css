@@ -6,6 +6,7 @@
   background-color: var(--main-background-color);
   border-bottom: 1px solid var(--border-header-color);
   padding: 48px 24px 24px 24px;
+  position: relative;
 }
 
 /* @media only screen and (min-width: 744px) {
@@ -51,6 +52,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: color 0.5s ease;
 }
 @media only screen and (min-width: 744px) {
   .logo {
@@ -81,7 +83,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  transition: color 0.3s;
+  transition: color 0.5s ease;
 }
 
 .logo:hover,
@@ -98,12 +100,13 @@
   fill: var(--icon-color);
   width: 30px;
   height: 30px;
-  transition: fill 0.3s;
+  transition: fill, transform 0.5s ease;
   cursor: pointer;
 }
 .headerIcon:hover {
   fill: #d0af12;
   stroke: #d0af12;
+  transform: scale(1.2);
 }
 
 @media only screen and (min-width: 1440px) {

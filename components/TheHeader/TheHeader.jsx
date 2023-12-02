@@ -6,6 +6,7 @@ import { HiShoppingCart } from "react-icons/hi";
 import BurgerMenuBtn from "../UI/BurgerMenuBtn/BurgerMenuBtn";
 import { RiExchangeLine } from "react-icons/ri";
 import DesktopSearchBtn from "../UI/DesktopSearchBtn/DesktopSearchBtn";
+import ShopList from "./ShopList/ShopList";
 
 const TheHeader = () => {
   return (
@@ -56,7 +57,7 @@ const TheHeader = () => {
           <DesktopSearchBtn customClass={s.headerIcon} />
         </li>
         <li className={s.hoverIcon}>
-          <HiShoppingCart className={s.headerIcon} />
+          <ShopList />
         </li>
       </ul>
     </header>
