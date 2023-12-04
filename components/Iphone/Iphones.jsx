@@ -10,6 +10,11 @@ import { HiShoppingCart } from "react-icons/hi";
 
 const Iphones = () => {
   const [gadgets, setGadgets] = useState([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropDownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,10 +53,26 @@ const Iphones = () => {
         <div className={s.filterContainer}>
           <ul className={s.categoriesList}>
             <li className={s.categoriesItem}>
-              <div className={s.categoryName}>
+              <div className={s.categoryName} onClick={handleDropDownToggle}>
                 <span>Модель</span>
-                <IoIosArrowDown className={s.openList} />
+                <IoIosArrowDown
+                  className={`${s.openList} ${isDropdownOpen && s.open}`}
+                />
               </div>
+              {isDropdownOpen && (
+                <div
+                  className={`${s.dropdownContent} ${
+                    isDropdownOpen && s.dropdownOpen
+                  }`}
+                >
+                  {gadgets.map((gadget, index) => (
+                    <label key={index}>
+                      <input type="checkbox" className={s.checkBox} />
+                      {gadget.name}
+                    </label>
+                  ))}
+                </div>
+              )}
             </li>
             <li className={s.categoriesItem}>
               <div className={s.categoryName}>
@@ -82,8 +103,8 @@ const Iphones = () => {
                     <Image
                       className={s.phoneImg}
                       src={`${gadget.poster[0]}`}
-                      width={200}
-                      height={200}
+                      width={150}
+                      height={150}
                       alt={gadget.name}
                     />
                     <p className={s.productName}>{gadget.name}</p>
