@@ -7,14 +7,10 @@ import { IoIosArrowDown } from "react-icons/io";
 import phones from "../../mocks/iphones.json";
 import { fetchAllGudget } from "@/services/api/api";
 import { HiShoppingCart } from "react-icons/hi";
+import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
 
 const Iphones = () => {
   const [gadgets, setGadgets] = useState([]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleDropDownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,46 +48,22 @@ const Iphones = () => {
       <div className={s.mainScreenProducts}>
         <div className={s.filterContainer}>
           <ul className={s.categoriesList}>
-            <li className={s.categoriesItem}>
-              <div className={s.categoryName} onClick={handleDropDownToggle}>
-                <span>Модель</span>
-                <IoIosArrowDown
-                  className={`${s.openList} ${isDropdownOpen && s.open}`}
-                />
-              </div>
-              {isDropdownOpen && (
-                <div
-                  className={`${s.dropdownContent} ${
-                    isDropdownOpen && s.dropdownOpen
-                  }`}
-                >
-                  {gadgets.map((gadget, index) => (
-                    <label key={index}>
-                      <input type="checkbox" className={s.checkBox} />
-                      {gadget.name}
-                    </label>
-                  ))}
-                </div>
-              )}
-            </li>
-            <li className={s.categoriesItem}>
-              <div className={s.categoryName}>
-                <span>Колір</span>
-                <IoIosArrowDown className={s.openList} />
-              </div>
-            </li>
-            <li className={s.categoriesItem}>
-              <div className={s.categoryName}>
-                <span>Обєм памяті</span>
-                <IoIosArrowDown className={s.openList} />
-              </div>
-            </li>
-            <li className={s.categoriesItem}>
-              <div className={s.categoryName}>
-                <span>Версія</span>
-                <IoIosArrowDown className={s.openList} />
-              </div>
-            </li>
+            <DropDownFilter
+              items={gadgets.map((gadget) => gadget.name)}
+              label="Модель"
+            />
+            <DropDownFilter
+              items={gadgets.map((gadget) => gadget.color)}
+              label="Колір"
+            />
+            <DropDownFilter
+              items={gadgets.map((gadget) => gadget.storage)}
+              label="Об'єм пам'яті"
+            />
+            <DropDownFilter
+              items={gadgets.map((gadget) => gadget.version)}
+              label="Версія"
+            />
           </ul>
         </div>
         <div>
