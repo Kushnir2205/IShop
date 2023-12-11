@@ -34,10 +34,6 @@ const ProductFormAction = ({ btnAction, data = ADDFORM }) => {
     fetchAddGudget(formData);
   };
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
   return (
     <form className={s.formWrapper} onSubmit={handleSubmit}>
       <div className={s.leftColumn}>

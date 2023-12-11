@@ -39,7 +39,7 @@
   margin: 0 auto;
   width: 200px;
   background-color: var(--main-text-color);
-  color: var(--main-background-color);
+  color: var(--main-background-color); 
 }
 .formSubmit:not([disabled]):hover {
   background-color: transparent;

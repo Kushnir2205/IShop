@@ -120,7 +120,7 @@ const ConsoleTable = ({ data }) => {
             src={photo}
             loading="lazy"
             style={{ borderRadius: "10%" }}
-            className={ s.gudgetPhoto}
+            className={s.gudgetPhoto}
           />
         ))}
       </Box>
@@ -142,10 +142,6 @@ const ConsoleTable = ({ data }) => {
             "Something went wrong, please reload the page and try again."
           );
         }
-      };
-      const handleAdd = () => {
-        console.log("Add Item");
-        toast.success("Add");
       };
 
       return (
