@@ -1,14 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import s from "./DropDownFilter.module.css";
 
-const DropDownFilter = ({ items, label }) => {
+const DropDownFilter = ({ items, label, onFilterChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
 
   const handleDropDownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
 
   return (
     <li className={s.categoriesItem}>
@@ -25,7 +27,10 @@ const DropDownFilter = ({ items, label }) => {
           >
             {items.map((item, index) => (
               <label className={s.label} key={index}>
-                <input type="checkbox" className={s.checkBox} />
+                <input
+                  type="checkbox"
+                  className={s.checkBox}
+                />
                 {item}
               </label>
             ))}

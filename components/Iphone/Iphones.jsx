@@ -3,27 +3,23 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import s from "./Iphone.module.css";
-import { IoIosArrowDown } from "react-icons/io";
 import phones from "../../mocks/iphones.json";
-import { fetchAllGudget } from "@/services/api/api";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
+import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
 
 const Iphones = () => {
-  const [gadgets, setGadgets] = useState([]);
+  const {
+    data: gadgets = [],
+    error,
+    isLoading,
+  } = useFetchAllGudgetQuery({ params: "iphone" });
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchAllGudget();
-        setGadgets(data);
-      } catch (error) {
-        console.error("Помилка при отриманні гаджетів:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+    if (error) {
+      console.error("Помилка при отриманні гаджетів:", error);
+    }
+  }, [error]);
 
   return (
     <section className={s.sectionContainer}>
@@ -49,19 +45,19 @@ const Iphones = () => {
         <div className={s.filterContainer}>
           <ul className={s.categoriesList}>
             <DropDownFilter
-              items={gadgets.map((gadget) => gadget.name)}
+              items={gadgets?.map((gadget) => gadget.name) || []}
               label="Модель"
             />
             <DropDownFilter
-              items={gadgets.map((gadget) => gadget.color)}
+              items={gadgets?.map((gadget) => gadget.color) || []}
               label="Колір"
             />
             <DropDownFilter
-              items={gadgets.map((gadget) => gadget.storage)}
+              items={gadgets?.map((gadget) => gadget.storage) || []}
               label="Об'єм пам'яті"
             />
             <DropDownFilter
-              items={gadgets.map((gadget) => gadget.version)}
+              items={gadgets?.map((gadget) => gadget.version) || []}
               label="Версія"
             />
           </ul>
