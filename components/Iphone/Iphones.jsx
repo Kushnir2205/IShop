@@ -4,16 +4,16 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import s from "./Iphone.module.css";
 import phones from "../../mocks/iphones.json";
-import { fetchAllGudget } from "@/services/api/api";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
-import {
-  productsApi,
-  useFetchAllGudgetQuery,
-} from "@/redux/productsApi/productsApi";
+import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
 
 const Iphones = () => {
-  const { data: gadgets = [], error, isLoading } = useFetchAllGudgetQuery();
+  const {
+    data: gadgets = [],
+    error,
+    isLoading,
+  } = useFetchAllGudgetQuery({ params: "iphone" });
 
   useEffect(() => {
     if (error) {
