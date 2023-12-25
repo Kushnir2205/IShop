@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 
 const Iphones = () => {
   const { addItem } = useActions();
-  сonst {cart} = useSelector(state => state)
   const {
     data: gadgets = [],
     error,
