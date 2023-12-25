@@ -1,19 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import s from "./Iphone.module.css";
 import phones from "../../mocks/iphones.json";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
 import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
+import { useActions } from "@/hooks/useActions";
+import { useSelector } from "react-redux";
 
 const Iphones = () => {
+  const { addItem } = useActions();
   const {
     data: gadgets = [],
     error,
     isLoading,
-  } = useFetchAllGudgetQuery({ params: "iphone" });
+  } = useFetchAllGudgetQuery({ category: "iphone" });
 
   useEffect(() => {
     if (error) {
@@ -22,7 +25,7 @@ const Iphones = () => {
   }, [error]);
 
   return (
-    <section className={s.sectionContainer}>
+    <>
       <div className={s.listProduct}>
         <ul className={s.iphoneList}>
           {phones.iphones.map((iphone) => (
@@ -66,8 +69,8 @@ const Iphones = () => {
           <ul className={s.mainIphoneList}>
             {gadgets.map((gadget) => (
               <li className={s.productItem} key={gadget.id}>
-                <Link href={`/product/${gadget.id}`}>
-                  <div className={s.cardOverlay}>
+                <div className={s.cardOverlay}>
+                  <Link href={`/product/${gadget.id}`}>
                     <Image
                       className={s.phoneImg}
                       src={`${gadget.poster[0]}`}
@@ -75,23 +78,26 @@ const Iphones = () => {
                       height={150}
                       alt={gadget.name}
                     />
-                    <p className={s.productName}>{gadget.name}</p>
-                    <p className={s.productColor}>{gadget.color}</p>
-                    <div className={s.priceCart}>
-                      <p className={s.productPrice}>$ {gadget.price}</p>
-                      <HiShoppingCart className={s.iconCart} />
-                    </div>
+                  </Link>
+                  <p className={s.productName}>{gadget.name}</p>
+                  <p className={s.productColor}>{gadget.color}</p>
+                  <div className={s.priceCart}>
+                    <p className={s.productPrice}>$ {gadget.price}</p>
+                    <HiShoppingCart
+                      className={s.iconCart}
+                      onClick={() => addItem(gadget)}
+                    />
                   </div>
-                  <div className={s.overlay}>
-                    <button className={s.buyProduct}>Замовити в 1 клік</button>
-                  </div>
-                </Link>
+                </div>
+                <div className={s.overlay}>
+                  <button className={s.buyProduct}>Замовити в 1 клік</button>
+                </div>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

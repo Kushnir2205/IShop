@@ -47,9 +47,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.sectionContainer {
-  margin-bottom: 200px;
-}
 .filterContainer {
   min-width: 350px;
   height: 400px;

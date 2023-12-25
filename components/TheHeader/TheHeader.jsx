@@ -18,7 +18,7 @@ const TheHeader = () => {
         </Link>
         <ul className={s.navList}>
           <li className={s.navItem}>
-            <Link className={s.linkItem} href="/iphone">
+            <Link className={s.linkItem} href="/catalog/iphone">
               Iphone
             </Link>
           </li>
