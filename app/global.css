@@ -92,5 +92,7 @@ svg {
 .swiper-pagination-bullet-active {
   background-color: var(--purple-slider-btn-color);
 }
-
+body {
+  overflow-x: hidden;
+}
 /* ------------ END OF SLIDER -------------- */

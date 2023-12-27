@@ -2,9 +2,12 @@
 import React, { useState } from "react";
 import { HiShoppingCart } from "react-icons/hi";
 import s from "./ShopList.module.css";
+import { cartSelector } from "@/redux/cart/cartSelector";
+import { useSelector } from "react-redux";
 
 const ShopList = () => {
   let [isOpen, setIsOpen] = useState(false);
+  const cartSelect = useSelector(cartSelector);
   return (
     <>
       <div>
@@ -13,9 +16,12 @@ const ShopList = () => {
           className={`${s.shopIcon} ${isOpen ? s.active : ""}`}
         />
       </div>
-      {isOpen && (
-        <div className={`${s.shopCart} ${isOpen ? s.open : ""}`}></div>
-      )}
+
+      <div className={`${s.shopCart} ${isOpen ? s.open : ""}`}>
+        {cartSelect.map((item) => (
+          <p key={item._id}>{item.name}</p>
+        ))}
+      </div>
     </>
   );
 };

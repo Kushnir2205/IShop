@@ -4,7 +4,6 @@
   height: 30px;
   transition: fill, transform 0.5s ease;
   cursor: pointer;
-  position: relative;
 }
 .shopIcon:hover,
 .shopIcon.active {
@@ -15,7 +14,7 @@
 .shopCart {
   position: absolute;
   top: 110px;
-  right: 0px;
+  right: 0;
   width: 450px;
   min-height: 300px;
   background-color: var(--main-background-color);
@@ -24,7 +23,8 @@
   box-shadow: -11px 11px 41px 4px rgba(187, 168, 57, 0.75);
   -webkit-box-shadow: -11px 11px 41px 4px rgba(187, 168, 57, 0.75);
   -moz-box-shadow: -11px 11px 41px 4px rgba(187, 168, 57, 0.75);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
+  transform: translateX(500px);
 }
 .shopCart.open {
   transform: translateX(0);
