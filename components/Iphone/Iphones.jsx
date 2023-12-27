@@ -9,9 +9,14 @@ import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
 import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
 import { useActions } from "@/hooks/useActions";
 import { useSelector } from "react-redux";
+import { selectedIds } from "@/redux/cart/cartSelector";
 
 const Iphones = () => {
-  const { addItem } = useActions();
+  const { addItem, removeItem } = useActions();
+
+  const idsSelector = useSelector(selectedIds);
+  console.log(idsSelector);
+
   const {
     data: gadgets = [],
     error,
@@ -83,10 +88,14 @@ const Iphones = () => {
                   <p className={s.productColor}>{gadget.color}</p>
                   <div className={s.priceCart}>
                     <p className={s.productPrice}>$ {gadget.price}</p>
-                    <HiShoppingCart
-                      className={s.iconCart}
-                      onClick={() => addItem(gadget)}
-                    />
+                    {idsSelector.includes(gadget._id) ? (
+                      <p onClick={() => removeItem(gadget._id)}>hello</p>
+                    ) : (
+                      <HiShoppingCart
+                        className={s.iconCart}
+                        onClick={() => addItem(gadget)}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className={s.overlay}>
