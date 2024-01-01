@@ -10,6 +10,7 @@ import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
 import { useActions } from "@/hooks/useActions";
 import { useSelector } from "react-redux";
 import { selectedIds } from "@/redux/cart/cartSelector";
+import { BsFillCartCheckFill } from "react-icons/bs";
 
 const Iphones = () => {
   const { addItem, removeItem } = useActions();
@@ -89,7 +90,10 @@ const Iphones = () => {
                   <div className={s.priceCart}>
                     <p className={s.productPrice}>$ {gadget.price}</p>
                     {idsSelector.includes(gadget._id) ? (
-                      <p onClick={() => removeItem(gadget._id)}>hello</p>
+                      <BsFillCartCheckFill
+                        className={s.iconInCart}
+                        onClick={() => removeItem(gadget._id)}
+                      />
                     ) : (
                       <HiShoppingCart
                         className={s.iconCart}

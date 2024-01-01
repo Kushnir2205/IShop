@@ -183,3 +183,9 @@
   opacity: 1;
   transform: scale(1);
 }
+
+.iconInCart {
+  width: 28px;
+  height: 28px;
+  fill: #a38a17;
+}
