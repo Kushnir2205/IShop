@@ -16,7 +16,6 @@ const Iphones = () => {
   const { addItem, removeItem } = useActions();
 
   const idsSelector = useSelector(selectedIds);
-  console.log(idsSelector);
 
   const {
     data: gadgets = [],

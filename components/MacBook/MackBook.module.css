@@ -1,0 +1,49 @@
+.listProduct {
+  margin-bottom: 50px;
+}
+.iphoneList {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.images {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.iphoneItem {
+  padding: 8px;
+  width: 160px;
+  height: 170px;
+  background-color: var(--footer-background-color);
+  border-radius: 24px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.11) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+.iphoneItem:hover {
+  -webkit-box-shadow: 2px 0px 58px -10px rgba(255, 255, 102, 0.5);
+  -moz-box-shadow: 2px 0px 58px -10px rgba(255, 255, 102, 0.5);
+  box-shadow: 2px 0px 58px -10px rgba(255, 255, 102, 0.5);
+  transform: scale(1.1);
+}
+
+.name {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+
+  color: var(--main-text-color);
+
+  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
