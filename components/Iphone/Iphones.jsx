@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Iphone.module.css";
 import phones from "../../mocks/iphones.json";
 import { HiShoppingCart } from "react-icons/hi";
@@ -53,19 +53,23 @@ const Iphones = () => {
         <div className={s.filterContainer}>
           <ul className={s.categoriesList}>
             <DropDownFilter
-              items={gadgets?.map((gadget) => gadget.name) || []}
+              items={[...new Set(gadgets?.map((gadget) => gadget.name))] || []}
               label="Модель"
             />
             <DropDownFilter
-              items={gadgets?.map((gadget) => gadget.color) || []}
+              items={[...new Set(gadgets?.map((gadget) => gadget.color))] || []}
               label="Колір"
             />
             <DropDownFilter
-              items={gadgets?.map((gadget) => gadget.storage) || []}
+              items={
+                [...new Set(gadgets?.map((gadget) => gadget.storage))] || []
+              }
               label="Об'єм пам'яті"
             />
             <DropDownFilter
-              items={gadgets?.map((gadget) => gadget.version) || []}
+              items={
+                [...new Set(gadgets?.map((gadget) => gadget.version))] || []
+              }
               label="Версія"
             />
           </ul>

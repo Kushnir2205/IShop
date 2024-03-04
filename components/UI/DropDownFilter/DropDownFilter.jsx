@@ -5,12 +5,25 @@ import s from "./DropDownFilter.module.css";
 
 const DropDownFilter = ({ items, label, onFilterChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const handleDropDownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const handleFilterChange = (filter) => {
+    const index = selectedFilters.indexOf(filter);
+    if (index === -1) {
+      setSelectedFilters([...selectedFilters, filter]);
+    } else {
+      const updatedFilters = [...selectedFilters];
+      updatedFilters.splice(index, 1);
+      setSelectedFilters(updatedFilters);
+    }
+    if (onFilterChange) {
+      onFilterChange(selectedFilters);
+    }
+  };
 
   return (
     <li className={s.categoriesItem}>
@@ -30,6 +43,8 @@ const DropDownFilter = ({ items, label, onFilterChange }) => {
                 <input
                   type="checkbox"
                   className={s.checkBox}
+                  checked={selectedFilters.includes(item)}
+                  onChange={() => handleFilterChange(item)}
                 />
                 {item}
               </label>
