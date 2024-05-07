@@ -23,7 +23,7 @@ const TheHeader = () => {
             </Link>
           </li>
           <li className={s.navItem}>
-            <Link className={s.linkItem} href="/ipad">
+            <Link className={s.linkItem} href="/catalog/ipad">
               Ipad
             </Link>
           </li>

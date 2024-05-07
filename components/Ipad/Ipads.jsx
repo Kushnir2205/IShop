@@ -1,23 +1,22 @@
-import Link from "next/link";
 import React from "react";
-import macs from "../../mocks/macBook.json";
 import Image from "next/image";
-import s from "./MackBook.module.css";
-import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
+import Link from "next/link";
+import s from "./Ipad.module.css";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
 import { useSelector } from "react-redux";
-import { selectedIds } from "@/redux/cart/cartSelector";
+import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
+import pads from "../../mocks/ipad.json";
 import { useActions } from "@/hooks/useActions";
-
-const MacBooks = () => {
+import { selectedIds } from "@/redux/cart/cartSelector";
+const Ipads = () => {
   const { addItem, removeItem } = useActions();
   const {
     data: gadgets = [],
     error,
     isLoading,
-  } = useFetchAllGudgetQuery({ category: "macbook" });
+  } = useFetchAllGudgetQuery({ category: "ipad" });
 
   const idsSelector = useSelector(selectedIds);
 
@@ -25,17 +24,17 @@ const MacBooks = () => {
     <>
       <div className={s.listProduct}>
         <ul className={s.iphoneList}>
-          {macs.macbooks.map((mackbook) => (
-            <li key={mackbook.id} className={s.iphoneItem}>
-              <Link href={`${mackbook.name}`}>
+          {pads.ipads.map((ipad) => (
+            <li key={ipad.id} className={s.iphoneItem}>
+              <Link href={`${ipad.name}`}>
                 <Image
                   className={s.images}
-                  src={`/assets/img/mac/${mackbook.image}.png`}
+                  src={`/assets/img/ipad/${ipad.image}.png`}
                   alt="photo"
                   width={100}
                   height={0}
                 />
-                <p className={s.name}>{mackbook.name}</p>
+                <p className={s.name}>{ipad.name}</p>
               </Link>
             </li>
           ))}
@@ -109,4 +108,4 @@ const MacBooks = () => {
   );
 };
 
-export default MacBooks;
+export default Ipads;
