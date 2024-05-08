@@ -21,7 +21,6 @@
 }
 .productItem:hover {
   transform: scale(1.1);
-  height: 520px;
 }
 .phoneImg {
   display: block;
@@ -86,7 +85,8 @@
   font-size: 18px;
   font-weight: 700;
 
-  width: calc(100% - 40px);
+  /* width: calc(100% - 40px); */
+  width: 100%;
   color: #717fff;
   color: var(--main-text-color);
   background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
@@ -100,6 +100,9 @@
 }
 
 .cardOverlay {
+  margin-bottom: 15px;
+}
+/* .cardOverlay {
   position: relative;
   overflow: hidden;
 }
@@ -117,4 +120,4 @@
 .productItem:focus .overlay {
   opacity: 1;
   transform: scale(1);
-}
+} */
