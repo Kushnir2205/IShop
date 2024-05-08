@@ -23,12 +23,12 @@ const TheHeader = () => {
             </Link>
           </li>
           <li className={s.navItem}>
-            <Link className={s.linkItem} href="/ipad">
+            <Link className={s.linkItem} href="/catalog/ipad">
               Ipad
             </Link>
           </li>
           <li className={s.navItem}>
-            <Link className={s.linkItem} href="/macbook">
+            <Link className={s.linkItem} href="/catalog/macbook">
               Macbook
             </Link>
           </li>

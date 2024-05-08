@@ -1,49 +1,41 @@
-"use client";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import s from "./Iphone.module.css";
-import phones from "../../mocks/iphones.json";
+import React from "react";
+import macs from "../../mocks/macBook.json";
+import Image from "next/image";
+import s from "./MackBook.module.css";
+import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
+import { BsFillCartCheckFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
-import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
-import { useActions } from "@/hooks/useActions";
 import { useSelector } from "react-redux";
 import { selectedIds } from "@/redux/cart/cartSelector";
-import { BsFillCartCheckFill } from "react-icons/bs";
+import { useActions } from "@/hooks/useActions";
 
-const Iphones = () => {
+const MacBooks = () => {
   const { addItem, removeItem } = useActions();
-
-  const idsSelector = useSelector(selectedIds);
-
   const {
     data: gadgets = [],
     error,
     isLoading,
-  } = useFetchAllGudgetQuery({ category: "iphone" });
+  } = useFetchAllGudgetQuery({ category: "macbook" });
 
-  useEffect(() => {
-    if (error) {
-      console.error("Помилка при отриманні гаджетів:", error);
-    }
-  }, [error]);
+  const idsSelector = useSelector(selectedIds);
 
   return (
     <>
       <div className={s.listProduct}>
         <ul className={s.iphoneList}>
-          {phones.iphones.map((iphone) => (
-            <li key={iphone.id} className={s.iphoneItem}>
-              <Link href={`${iphone.name}`}>
+          {macs.macbooks.map((mackbook) => (
+            <li key={mackbook.id} className={s.iphoneItem}>
+              <Link href={`${mackbook.name}`}>
                 <Image
                   className={s.images}
-                  src={`/assets/img/${iphone.image}.png`}
+                  src={`/assets/img/mac/${mackbook.image}.png`}
                   alt="photo"
                   width={100}
                   height={0}
                 />
-                <p className={s.name}>{iphone.name}</p>
+                <p className={s.name}>{mackbook.name}</p>
               </Link>
             </li>
           ))}
@@ -117,4 +109,4 @@ const Iphones = () => {
   );
 };
 
-export default Iphones;
+export default MacBooks;

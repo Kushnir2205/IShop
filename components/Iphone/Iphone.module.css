@@ -94,7 +94,6 @@
 }
 .productItem:hover {
   transform: scale(1.1);
-  height: 500px;
 }
 .phoneImg {
   display: block;
@@ -105,17 +104,17 @@
   text-align: center;
 
   color: var(--main-text-color);
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 .productColor {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 
   color: var(--main-text-color);
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -151,7 +150,8 @@
   font-size: 18px;
   font-weight: 700;
 
-  width: calc(100% - 40px);
+  /* width: calc(100% - 40px); */
+  width: 100%;
   color: #717fff;
   color: var(--main-text-color);
   background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
@@ -163,8 +163,11 @@
   border-radius: 16px;
   border: 2px solid #a38a17;
 }
-
 .cardOverlay {
+  margin-bottom: 15px;
+}
+
+/* .cardOverlay {
   position: relative;
   overflow: hidden;
 }
@@ -176,7 +179,7 @@
   opacity: 0;
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   transform: scale(0.8);
-}
+} */
 
 .productItem:hover .overlay,
 .productItem:focus .overlay {

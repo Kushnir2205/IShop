@@ -1,49 +1,40 @@
-"use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import s from "./Iphone.module.css";
-import phones from "../../mocks/iphones.json";
+import s from "./Ipad.module.css";
+import { BsFillCartCheckFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
-import { api, useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
-import { useActions } from "@/hooks/useActions";
 import { useSelector } from "react-redux";
+import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
+import pads from "../../mocks/ipad.json";
+import { useActions } from "@/hooks/useActions";
 import { selectedIds } from "@/redux/cart/cartSelector";
-import { BsFillCartCheckFill } from "react-icons/bs";
-
-const Iphones = () => {
+const Ipads = () => {
   const { addItem, removeItem } = useActions();
-
-  const idsSelector = useSelector(selectedIds);
-
   const {
     data: gadgets = [],
     error,
     isLoading,
-  } = useFetchAllGudgetQuery({ category: "iphone" });
+  } = useFetchAllGudgetQuery({ category: "ipad" });
 
-  useEffect(() => {
-    if (error) {
-      console.error("Помилка при отриманні гаджетів:", error);
-    }
-  }, [error]);
+  const idsSelector = useSelector(selectedIds);
 
   return (
     <>
       <div className={s.listProduct}>
         <ul className={s.iphoneList}>
-          {phones.iphones.map((iphone) => (
-            <li key={iphone.id} className={s.iphoneItem}>
-              <Link href={`${iphone.name}`}>
+          {pads.ipads.map((ipad) => (
+            <li key={ipad.id} className={s.iphoneItem}>
+              <Link href={`${ipad.name}`}>
                 <Image
                   className={s.images}
-                  src={`/assets/img/${iphone.image}.png`}
+                  src={`/assets/img/ipad/${ipad.image}.png`}
                   alt="photo"
                   width={100}
                   height={0}
                 />
-                <p className={s.name}>{iphone.name}</p>
+                <p className={s.name}>{ipad.name}</p>
               </Link>
             </li>
           ))}
@@ -117,4 +108,4 @@ const Iphones = () => {
   );
 };
 
-export default Iphones;
+export default Ipads;
