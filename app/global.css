@@ -8,24 +8,26 @@ body {
   --main-background-color: #0f0f0f;
   --title-text-color: #fffdfd;
   --main-text-color: #fff;
-  --price-color: #ffb300;
+  --price-color: #dfbe5d;
   --in-stock-color: #4fd12e;
   --footer-background-color: #242424;
   --toggle-bg-btn: #322f2f;
   --border-header-color: #b1b1b1;
-  --purple-slider-btn-color: #cdbbfb;
+  --purple-slider-btn-color: #a4833b;
   --icon-color: #f8f8f8;
+  --btn-buy-product-text-color: #fffdfd;
 }
 body.light {
   --main-background-color: #fff;
   --title-text-color: #000;
   --main-text-color: #000;
-  --price-color: #fb861a;
+  --price-color: #aa8620;
   --in-stock-color: #4fd12e;
   --footer-background-color: #ededed;
   --toggle-bg-btn: #f0f0f0;
   --border-header-color: #535353;
   --icon-color: #181616;
+  --btn-buy-product-text-color: #aa8620;
 }
 
 a {
@@ -90,8 +92,10 @@ svg {
   }
 }
 .swiper-pagination-bullet-active {
-  background-color: var(--purple-slider-btn-color);
+  /* background-color: var(--purple-slider-btn-color); */
+  background: linear-gradient(to bottom left, #ccbc7f 100%, #a4833b 100%);
 }
+
 body {
   overflow-x: hidden;
 }

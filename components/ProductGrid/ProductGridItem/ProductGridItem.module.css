@@ -36,9 +36,8 @@
 @media only screen and (min-width: 1440px) {
   .smallItem {
     width: 608px;
-    height: 331px;
-    padding: 0;
-    margin-bottom: 48px;
+    height: 281px;
+    padding: 32px 8px 32px 32px;
   }
 }
 @media only screen and (min-width: 744px) {
@@ -56,9 +55,8 @@
 @media only screen and (min-width: 1440px) {
   .longItem {
     width: 608px;
-    height: 608px;
-    padding: 0;
-    margin-bottom: 48px;
+    height: 430px;
+    padding: 32px 8px 32px 32px;
   }
 }
 
@@ -85,8 +83,6 @@
 }
 @media only screen and (min-width: 1440px) {
   .desktopInfo {
-    padding-top: 48px;
-    padding-left: 48px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -103,7 +99,7 @@
     display: block;
     color: var(--main-text-color);
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
   }
 }
 .arrowIcon {
@@ -119,7 +115,7 @@
 
 .bigTitle {
   color: var(--main-text-color);
-  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
+  background: linear-gradient(to bottom left, #ccbc7f 50%, #a4833b 100%);
   /* background: linear-gradient(180deg, #8e7e6b, #ac9b87, #e5d4bc); */
   background-clip: text;
   -webkit-background-clip: text;
@@ -155,13 +151,13 @@
 }
 @media only screen and (min-width: 1440px) {
   .macImg {
-    width: 364px;
-    height: 262px;
+    width: 358px;
+    height: 217px;
   }
 }
 .iphoneImg {
-  width: 101px;
-  height: 129pxx;
+  width: 332px;
+  height: 396pxx;
   margin: 0 auto;
 }
 @media only screen and (min-width: 744px) {
@@ -178,6 +174,7 @@
     margin-left: 76px;
   }
 }
+
 .ipadImg {
   width: 122px;
   height: 135px;
@@ -192,11 +189,12 @@
 }
 @media only screen and (min-width: 1440px) {
   .ipadImg {
-    width: 449px;
-    height: 543px;
-    padding-top: 48px;
+    width: 328px;
+    height: 366px;
+    margin-left: 37px;
   }
 }
+
 .airPodsImg {
   width: 107px;
   height: 130px;
@@ -210,8 +208,8 @@
 }
 @media only screen and (min-width: 1440px) {
   .airPodsImg {
-    width: 260px;
-    height: 315px;
+    width: 200px;
+    height: 230px;
   }
 }
 .container {

@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   border: 1px solid var(--main-text-color);
-  border-radius: 16px;
+  border-radius: 32px;
   @media (min-width: 768px) {
     width: 292px;
   }
@@ -41,7 +41,7 @@
   }
   @media (min-width: 1440px) {
     margin-right: 5px;
-    width: 412px;
+    width: 504px;
     height: 543px;
   }
 }
