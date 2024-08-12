@@ -34,7 +34,7 @@
   color: var(--main-text-color);
   font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 600;
   line-height: normal;
 }
 .productColor {
@@ -44,7 +44,7 @@
   color: var(--main-text-color);
   font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 600;
   line-height: normal;
 }
 .priceCart {
@@ -61,16 +61,17 @@
     #ff9900 75%,
     #ffd700 100%
   ); */
-  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
+  /* background: linear-gradient(to bottom left, #ccbc7f 50%, #a4833b 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 28px;
+  -webkit-text-fill-color: transparent; */
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 .iconCart {
+  fill: var(--btn-buy-product-text-color);
   width: 28px;
   height: 28px;
   transition: fill 0.3s;
@@ -85,18 +86,19 @@
   font-size: 18px;
   font-weight: 700;
 
-  /* width: calc(100% - 40px); */
   width: 100%;
   color: #717fff;
-  color: var(--main-text-color);
-  background: linear-gradient(to bottom left, #ffff66 0%, #663300 100%);
+  color: var(--btn-buy-product-text-color);
+  /* background: linear-gradient(to bottom left, #ccbc7f 50%, #a4833b 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   padding: 18px 30px;
 
-  border-radius: 16px;
-  border: 2px solid #a38a17;
+  border: 2px solid;
+  border-color: #a4833b;
+  border-image-slice: 1;
+  border-radius: 32px;
 }
 
 .cardOverlay {
