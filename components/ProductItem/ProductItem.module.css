@@ -87,7 +87,6 @@
   font-weight: 700;
 
   width: 100%;
-  color: #717fff;
   color: var(--btn-buy-product-text-color);
   /* background: linear-gradient(to bottom left, #ccbc7f 50%, #a4833b 100%);
   background-clip: text;

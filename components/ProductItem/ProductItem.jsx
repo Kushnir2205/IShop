@@ -23,7 +23,7 @@ const ProductItem = ({ product }) => {
           </div>
         </div>
         <div className={s.overlay}>
-          <button className={s.buyProduct}>Замовити в 1 клік</button>
+          <button className={s.buyProduct}>Придбати</button>
         </div>
       </Link>
     </li>

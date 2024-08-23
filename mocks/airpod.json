@@ -1,0 +1,34 @@
+{
+  "airpods": [
+    {
+      "id": 1,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    },
+    {
+      "id": 2,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    },
+    {
+      "id": 3,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    },
+    {
+      "id": 4,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    },
+    {
+      "id": 5,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    },
+    {
+      "id": 6,
+      "name": "Airpods Pro 2",
+      "image": "3"
+    }
+  ]
+}

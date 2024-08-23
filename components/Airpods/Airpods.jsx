@@ -1,22 +1,23 @@
-import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import s from "./Ipad.module.css";
+import React from "react";
+import pods from "../../mocks/airpod.json";
+import Image from "next/image";
+import s from "./Airpods.module.css";
+import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import DropDownFilter from "../UI/DropDownFilter/DropDownFilter";
 import { useSelector } from "react-redux";
-import { useFetchAllGudgetQuery } from "@/redux/productsApi/productsApi";
-import pads from "../../mocks/ipad.json";
-import { useActions } from "@/hooks/useActions";
 import { selectedIds } from "@/redux/cart/cartSelector";
-const Ipads = () => {
+import { useActions } from "@/hooks/useActions";
+
+const Airpods = () => {
   const { addItem, removeItem } = useActions();
   const {
     data: gadgets = [],
     error,
     isLoading,
-  } = useFetchAllGudgetQuery({ category: "ipad" });
+  } = useFetchAllGudgetQuery({ category: "airpods" });
 
   const idsSelector = useSelector(selectedIds);
 
@@ -24,17 +25,17 @@ const Ipads = () => {
     <>
       <div className={s.listProduct}>
         <ul className={s.iphoneList}>
-          {pads.ipads.map((ipad) => (
-            <li key={ipad.id} className={s.iphoneItem}>
-              <Link href={`${ipad.name}`}>
+          {pods.airpods.map((airpod) => (
+            <li key={airpod.id} className={s.iphoneItem}>
+              <Link href={`${airpod.name}`}>
                 <Image
                   className={s.images}
-                  src={`/assets/img/slider/${ipad.image}.png`}
+                  src={`/assets/img/slider/${airpod.image}.png`}
                   alt="photo"
                   width={100}
                   height={0}
                 />
-                <p className={s.name}>{ipad.name}</p>
+                <p className={s.name}>{airpod.name}</p>
               </Link>
             </li>
           ))}
@@ -74,8 +75,8 @@ const Ipads = () => {
                     <Image
                       className={s.phoneImg}
                       src={`${gadget.poster[0]}`}
-                      width={190}
-                      height={220}
+                      width={150}
+                      height={150}
                       alt={gadget.name}
                     />
                   </Link>
@@ -108,4 +109,4 @@ const Ipads = () => {
   );
 };
 
-export default Ipads;
+export default Airpods;

@@ -4,37 +4,37 @@
       "id": 1,
       "name": "Ipad 10 10.9 2022",
       "color": "silver",
-      "image": "ipad_10"
+      "image": "4"
     },
     {
       "id": 2,
       "name": "Ipad 9 10.2 2021",
       "color": "space gray",
-      "image": "ipad_10"
+      "image": "4"
     },
     {
       "id": 3,
       "name": "Ipad Pro 12.9 M2 2022",
       "color": "space gray",
-      "image": "ipad_pro12"
+      "image": "4"
     },
     {
       "id": 4,
       "name": "Ipad Pro 11 M2 2022",
       "color": "space gray",
-      "image": "ipad_10"
+      "image": "4"
     },
     {
       "id": 5,
       "name": "Ipad Air 2022",
       "color": "starlight",
-      "image": "ipad_pro12"
+      "image": "4"
     },
     {
       "id": 6,
       "name": "Ipad Mini 6 2021",
       "color": "blue",
-      "image": "ipad_10"
+      "image": "4"
     }
   ]
 }

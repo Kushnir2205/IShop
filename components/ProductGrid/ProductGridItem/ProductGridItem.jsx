@@ -94,8 +94,10 @@ const ProductGridItem = () => {
           <div className={s.refToTrade}>
             <h2 className={s.bigTitle}>TRADE IN</h2>
             <div className={s.refToProd}>
-              <p className={s.description}>Дізнатися більше</p>
-              <HiOutlineArrowRight className={s.arrowIcon} />
+              {/* <div className={s.btnDesc}> */}
+              <p className={s.btnDesc}>Дізнатися більше</p>
+              {/* <HiOutlineArrowRight className={s.arrowIcon} /> */}
+              {/* </div> */}
             </div>
           </div>
           <Image className={s.tradeInImg} src={box} alt="box iphone" />

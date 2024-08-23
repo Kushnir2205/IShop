@@ -28,7 +28,7 @@ const DropDownFilter = ({ items, label, onFilterChange }) => {
   return (
     <li className={s.categoriesItem}>
       <div className={s.categoryName} onClick={handleDropDownToggle}>
-        <span>{label}</span>
+        <span className={s.label}>{label}</span>
         <IoIosArrowDown
           className={`${s.openList} ${isDropdownOpen && s.open}`}
         />

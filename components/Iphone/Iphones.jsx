@@ -83,8 +83,8 @@ const Iphones = () => {
                     <Image
                       className={s.phoneImg}
                       src={`${gadget.poster[0]}`}
-                      width={150}
-                      height={150}
+                      width={190}
+                      height={220}
                       alt={gadget.name}
                     />
                   </Link>
@@ -106,7 +106,7 @@ const Iphones = () => {
                   </div>
                 </div>
                 <div className={s.overlay}>
-                  <button className={s.buyProduct}>Замовити в 1 клік</button>
+                  <button className={s.buyProduct}>Придбати</button>
                 </div>
               </li>
             ))}

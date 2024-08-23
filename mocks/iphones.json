@@ -2,51 +2,39 @@
   "iphones": [
     {
       "id": 1,
-      "name": "Iphone 14 Pro Max",
+      "name": "Iphone 15 Pro Max",
       "color": "red",
-      "image": "14_pro_max"
+      "image": "1"
     },
     {
       "id": 2,
-      "name": "Iphone 14 Pro",
+      "name": "Iphone 15 Pro",
       "color": "blue",
-      "image": "14_pro_max"
+      "image": "1"
     },
     {
       "id": 3,
-      "name": "Iphone 14 Plus",
+      "name": "Iphone 15 Pro Max",
       "color": "blue",
-      "image": "iphone_14"
+      "image": "1"
     },
     {
       "id": 4,
-      "name": "Iphone 14",
+      "name": "Iphone 15 Pro",
       "color": "blue",
-      "image": "iphone_14"
+      "image": "1"
     },
     {
       "id": 5,
-      "name": "Iphone 13 Pro Max",
+      "name": "Iphone 15 Pro Max",
       "color": "blue",
-      "image": "iphone-13-pro-max"
+      "image": "1"
     },
     {
       "id": 6,
-      "name": "Iphone 13 Pro",
+      "name": "Iphone 15 Pro",
       "color": "blue",
-      "image": "iphone-13-pro-max"
-    },
-    {
-      "id": 7,
-      "name": "Iphone 13",
-      "color": "blue",
-      "image": "iphone-13"
-    },
-    {
-      "id": 8,
-      "name": "Iphone 12 Pro Max",
-      "color": "blue",
-      "image": "iphone_12_pro_max"
+      "image": "1"
     }
   ]
 }
